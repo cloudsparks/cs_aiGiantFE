@@ -1,0 +1,2 @@
+[Wed Dec 07 02:06:17.297211 2022] [:error] [pid 14177] [client 127.0.0.1:57371] PHP Parse error:  syntax error in /Users/felix/sites/fs/FSFE/member/captcha.php on line 23, referer: http://member.fs/login
+[Wed Dec 07 12:27:59.798722 2022] [:error] [pid 14883] [client 127.0.0.1:61435] PHP Parse error:  syntax error in /Users/felix/sites/fs/FSFE/member/dashboard.php on line 108, referer: http://member.fs/login.php

@@ -1,0 +1,26 @@
+<coinRate>
+ <Data>
+  <name>bonusCredit</name>
+  <value>1.00000000</value>
+ </Data>
+ <Data>
+  <name>coalculus</name>
+  <value>0.40000000</value>
+ </Data>
+ <Data>
+  <name>infireum</name>
+  <value>0.40000000</value>
+ </Data>
+ <Data>
+  <name>maxCap</name>
+  <value>1.00000000</value>
+ </Data>
+ <Data>
+  <name>purchaseCredit</name>
+  <value>1.00000000</value>
+ </Data>
+ <Data>
+  <name>quantiniumCredit</name>
+  <value>1.00000000</value>
+ </Data>
+</coinRate>

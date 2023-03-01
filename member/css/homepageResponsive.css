@@ -1,0 +1,973 @@
+/* Ipad Pro View */
+@media (max-width: 1199px) {
+    .homepage_modal {
+        width:100%;
+    }
+
+    /*.homepage_section01_content,
+    .homepage_section02_content,
+    .homepage_section04_content,
+    .homepage_section05_content,
+    .homepage_section04_list li,
+    .blackFont {
+        font-size: 21px;
+    }*/
+
+    .homepage_section03_date,
+    .homepage_section03_title{
+        font-size: 24px;
+    }
+
+    .homepage_section03_date,
+    .homepage_section03_title{
+        font-size: 22px;
+    }
+    
+    .homepage_modal_logo {
+        width:25%;
+        margin: 0 auto;
+    }
+
+    .homepage_modal_title, .homepage_modal_content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .homepage_modal_content {
+        margin-top: 2.5%;;
+        padding: 2.5%;
+        width: 80%;
+        min-height: 0;
+    }
+
+    .compImage{
+        width:100%;
+    }
+
+    /*.blackFont{
+        font-size: 18px;
+    }*/
+
+    .productPortfolio_section01_Desc {
+        padding: 25px 20px;
+        min-height: 0;
+        height: auto;
+    }
+
+    /*blockquote {
+        font-size: 1.1em;
+        padding: 0 5em;
+    }
+
+    blockquote:before {
+        left: 15px;
+    }
+
+    blockquote:after {
+        right: 15px;
+    }*/
+
+    .aboutUsContent1 {
+        height: 315px;
+        transform: unset; 
+    }
+
+    .aboutUsContent2 {
+        height: 280px;
+        transform: unset; 
+    }
+}
+
+
+/* Ipad View */
+@media (max-width: 990px) {
+    .showDropdown.open {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .menuIcon.fas, .menuIcon.fa {
+        font-size: 30px;
+    }
+
+    .transparentBG{
+        background: rgba(0,0,0,0.7);
+        top: 0;
+        left: 0%;
+        right: 0;
+        position: fixed;
+        z-index: 50;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    .mobileSidebar.open ~ .transparentBG{
+        display: block;
+    }
+
+    .mobileSidebar{
+        bottom: 0;
+        top: 0;
+        left: -100%;
+        z-index: 100;
+        position: fixed;
+        width: 270px;
+        height: 100%;
+        background: #5c1700;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 15px;
+        overflow-y: auto;
+    }
+
+    .mobileSidebar.open {
+        left: 0;
+        transition: 0.3s ease;
+    }
+
+    .sidebarFont{
+        font-size: 12px;
+    }
+
+    .sidebarFooter{
+        position: absolute;
+        bottom: 1%;
+        width: 100%;
+    }
+
+    .borderline2 {
+        height: 2px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #d5d5d5;
+    }
+
+    .closeSidebar{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #fff;
+    }
+
+    .homepagePadding {
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+
+    .homepage_modal {
+        width:100%;
+    }
+
+    .homepage_modal_title {
+        text-align: center;
+        padding: 5% 0 2.5% 0;
+    }
+
+    .homepage_section01_title,
+    .homepage_section02_title,
+    .homepage_section04_title,
+    .homepage_section05_title {
+        font-size: 28px;
+    }
+
+    /*.homepage_section01_content,
+    .homepage_section02_content,
+    .homepage_section04_content,
+    .homepage_section05_content,
+    .homepage_section04_list li,
+    .blackFont {
+        font-size: 15px;
+    }*/
+    .homepage_section03_date,
+    .homepage_section03_title{
+        font-size: 18px;
+    }
+
+    .homepage_section01_button {
+        display:block;
+    }
+    .header_menu_div2{
+        width:100%;
+        text-align: center;
+    }
+
+    .header_menu_div {
+        width: 50%;
+    }
+    .homepage_modal_logo {
+        width:25%;
+        margin: 0 auto;
+    }
+    .homepage_modal_title, .homepage_modal_content {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .homepage_modal_content {
+        width: 80%;
+        min-height: 0;
+    }
+
+    .homepage_section04_list{
+        padding: 0;
+    }
+
+    .bannerTitle {
+        font-size: 65px;
+    }
+
+
+    .productPortfolio_section01_Desc {
+        padding: 25px 20px;
+    }
+
+    /*blockquote {
+        font-size: 1.1em;
+        padding: 0 5em;
+    }
+
+    blockquote:before {
+        left: 15px;
+    }
+
+    blockquote:after {
+        right: 15px;
+    }*/
+
+    .contactDetailsDesc {
+        /*padding: 20px 10% 20px 10%;*/
+    }
+
+    .contactTitle {
+        font-size: 22px;
+    }
+
+    .contactSubtitle1 {
+        width: 85%;
+    }
+
+    /*.contactText {
+        width: 85%;
+    }*/
+    .productDetailTitle{
+        font-size:20px;
+    }
+    .productDetailTitleDiv{
+        margin-bottom: 5px;
+        margin-top: 20px;
+        padding-left:20px;
+    }
+    .buttonsDiv{
+        margin-top: 20px;
+    }
+    .productButton1{
+        padding: 5px 15px;
+    }
+    .productButton2{
+        padding: 5px 15px;
+    }
+    .productButton3{
+        padding: 5px 15px;
+    }
+
+    .homepage_section01_image {
+        height: 300px;
+    }
+
+    .homepage_section03_video_div {
+        transform: translateY(0px);
+    }
+
+    .homepage_section05_background_logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .productPortfolio_section02 {
+        padding: 3em 50px;
+    }
+
+    .productPortfolio_section02_title {
+        font-size: 28px;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 999;
+        height: 100%;
+        width: 40%;
+        left: -100%;
+        top: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: #fff;
+        /*transition: all .5s ease;*/
+        overflow-y: auto;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .greyBackdrop.show {
+        display: block;
+    }
+
+    .cartPVDisplay {
+        font-size: 22px;
+    }
+    .responsiveImg1{
+        height: 250px!important;
+    }
+
+    .border2.ecosystem{
+         border-left: 8px solid #3A2804 !important;
+    }
+    
+    .contentText4{
+        font-size: 40px!important;
+    }
+    .pageTitleContact.jcv{
+        font-size: 35px!important;
+    }
+
+    .aboutUsC1 {
+        width: 360px;
+    }
+
+    .aboutUsContentImage {
+        height: unset;
+    }
+    .aboutUsImg1 {
+        width: 150px;
+    }
+
+    .aboutUsSection {
+        margin-top: unset;
+    }
+
+    .aboutUsContent1 {
+         transform: translateX(0); 
+    }
+
+    .aboutUsContent {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .aboutUsContent1 {
+        height: 190px;
+        padding: 40px;
+    }
+
+    .aboutUsContent2 {
+        height: 190px;
+         transform: translateX(0); 
+         padding: 40px;
+    }
+
+    .missContentSub1, .missContentSub_1{
+        font-size: 25px;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1240px) {
+   
+    .overlay1{
+        left: 7%!important;
+        right: 7%!important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1022px) {
+    .border2.ecosystem{
+         border-left: 8px solid #3A2804 !important;
+    }
+    .overlay1{
+        left: 10%!important;
+        right: 10%!important;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+   .contentText4{
+        font-size: 40px!important;
+    }
+    .pageTitleContact.jcv{
+        font-size: 35px!important;
+    }
+    .pageTitleContact1.jcv.title{
+        padding: -10px!important;
+    }
+}
+/* Mobile View */
+@media (max-width: 767px) {
+    .header_menu_div {
+        margin: auto 7px;
+    }
+
+    .menuIcon.fa, .menuIcon.fas {
+        font-size: 20px;
+    }
+
+    .homepage_modal {
+        width: 100%;
+    }
+
+    .mobileSidebar{
+        width: 270px;
+    }
+
+    .homepage_modal_title {
+        text-align: center;
+        font-size: 20px;
+        padding: 5% 0 2.5% 0;
+    }
+
+    .homepage_section01_title,
+    .homepage_section02_title,
+    .homepage_section04_title,
+    .homepage_section05_title {
+        font-size: 20px;
+    }
+
+    /*.homepage_section01_content,
+    .homepage_section02_content,
+    .homepage_section04_content,
+    .homepage_section05_content,
+    .homepage_section04_list li,
+    .blackFont {
+        padding: 1% 0 1% 0;
+        font-size: 15px;
+    }*/
+
+    .homepage_section01_content {
+        /*text-align: center;*/
+    }
+
+    .homepage_section03_title {
+        font-size: 11px;
+    }
+
+    .homepage_section03_date {
+        font-size: 9px;
+    }
+    .homepage_section03_content {
+        font-size: 14px;
+    }
+
+    .homepage_section05_background_logo {
+        top: -30%;
+        right: 5%;
+    }
+
+    .homepage_slide {
+        padding: 0;
+    }
+
+    .homepage_slide > div > div {
+        height: 50%;
+    }
+
+    .header_menu_div2{
+        width:100%;
+        text-align: center;
+    }
+
+    .header_menu_div {
+        width: 100%;
+      text-align: center;
+    }
+
+    .homepage_modal_logo {
+        width:40%;
+    }
+
+    .homepage_modal_content {
+        margin: 0;
+        padding: 5%;
+        width: 100%;
+    }
+
+    .backIcon {
+        font-size: 25px;
+    }
+    
+    .homepage_section04_list{
+        padding: 0;
+    }
+
+    .dashboardFooter {
+      position: relative;
+    }
+
+    .bannerTitle {
+        font-size: 25px;
+    }
+
+    .bannerSubtitle01 {
+        font-size:13px;
+    }
+
+    .bannerSubtitle02 {
+        color: #fff;
+        font-size:13px;
+    }
+
+    /*.homepage_header_logo{
+        width:100%;
+    }*/
+
+    .homepage_footer_text{
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .aboutTitle2 {
+        font-size:20px;
+    }
+
+    .aboutTitle {
+        font-size:20px;
+    }
+
+    .productPortfolio_section01_Div {
+        flex-direction: column-reverse;
+    }
+
+    .productPortfolio_section01_title {
+        font-size: 20px;
+    }
+
+    .productPortfolio_section02_title {
+        font-size: 20px;
+    }
+
+    .productPortfolio_section03_title {
+        font-size: 20px;
+    }
+
+    .productPortfolio_section04_title {
+        font-size: 20px;
+    }
+
+    .productPortfolio_section05_title {
+        font-size: 20px;
+    }
+
+    blockquote {
+        padding: 0 15px;
+    }
+
+    blockquote:before {
+        left: 5px;
+    }
+
+    blockquote:after {
+        right: 5px;
+    }
+
+    .contactUs label {
+        font-size: 18px;
+    }
+
+    .contactUs span {
+        font-size: 20px;
+    }
+
+    .contactUs button {
+        font-size: 10px;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+
+    .filterLeft button {
+        padding: 5px 8px;
+        margin: 6px 5px;
+        font-size: 12px;
+    }
+
+    .contactDetailsDesc {
+        padding: 0 25px;
+    }
+
+    .contactTitle {
+        font-size: 23px;
+    }
+
+    .contactSubtitle1 {
+        width: 85%;
+    }
+
+    /*.contactText {
+        width: 85%;
+    }*/
+
+    .feeCalc {
+        font-size: 13px;
+    }
+
+    .feeTotal {
+        font-size: 15px;
+    }
+    .pickUpSelectionDiv{
+        padding: 15px;
+    }
+
+    .homepage_product > img {
+        margin-left: auto;
+        margin-right: auto;
+        /*height: 200px;*/
+    }
+
+    .homepage_product2 {
+        height: 90%;
+    }
+
+    .homepage_product2 > img {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+    }
+
+    .homepagePadding {
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .homepage_section01_image {
+        height: 250px;
+    }
+
+    .compTitle {
+        font-size: 16px;
+    }
+
+    /*.bannerImg {
+        height: 150px;
+    }*/
+    .bannerImg1{
+        height: 200px;
+    }
+
+    .bannerImg.second {
+        height: auto;
+    }
+
+    .productPortfolio_section02 {
+        padding: 3em 15px;
+    }
+
+    .productPortfolio_section05 {
+        padding: 2em 20px;
+    }
+
+    .clientSlideWrap {
+        margin: 2em 0;
+    }
+
+    .productPortfolio_section04 {
+        padding: 3em 0;
+    }
+
+    .portfolioContentText {
+        font-size: 12px;
+    }
+
+    .productPortfolio_section01_Div {
+        padding: 30px;
+    }
+
+    .productBenefitImg {
+       padding: 20px 0;
+    }
+
+    .sortBox {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        z-index: 3;
+        background-color: #ececec;
+    }
+
+    .sortStyle {
+        color: black;
+    }
+
+    .sortBtn:checked ~ .sortStyle {
+        color: #27A9E0;
+    }
+
+    .sortBtn:checked ~ .sortBox {
+        display: block;
+    }
+
+    .sortBox {
+        width: 180px;
+        padding: 20px;
+    }
+
+    .topFilter {
+        display: block;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .sidebar {
+        width: 80%;
+    }
+
+    .cartPVDisplay {
+        font-size: 20px;
+    }
+
+    .cartRPDisplay {
+        font-size: 16px;
+    }
+
+    .descriptionContentDiv {
+        margin-top: 35px;
+    }
+
+    .loginModal {
+        margin-top: 50%;
+        transform: translateY(-25%);
+    }
+
+    .paddingTopTenMobile {
+        padding-top: 10px;
+    }
+    .pageTitleContact{
+        font-size: 25px !important;
+    }
+    .pageTitleContact.jcv{
+        font-size: 20px !important; 
+        padding: 30px!important;
+    }
+    .pageTitleContact{
+        font-size: 25px !important;
+    }
+    .contentText4{
+        font-size: 20px !important;
+    }
+    .contentText5{
+        font-size: 13px!important;
+    }
+    .contentText{
+        font-size: 12px !important;
+    }
+    .responsiveImg{
+        width: 110px;
+        max-height: 320px !important;
+    }
+    .contentText6{
+        font-size: 18px !important;
+    }
+    .box5{
+        padding: 15px!important;
+    }
+    .responsiveText ,.contentText3,.contentText2{
+        font-size: 12px!important;
+    }
+    .border2{
+        border-top: 0 !important;
+        border-left: 8px solid #3A2804 !important;
+        border-right: 8px solid #3A2804 !important;
+        border-bottom: 8px solid #3A2804 !important;
+    }
+    .userNameOverlay3.jcv{
+        padding: 10px!important;
+
+    }
+    .userNameOverlay3{
+        padding: 0px!important;
+
+    }
+    .form-group label.titleContactus{
+        font-size: 12px!important;
+    }
+
+    /*Mission and Vision*/
+    .missContent1{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .missContentSub1 {
+        font-size: 30px !important;
+        font-weight: bold;
+        padding: 0 30px 0 30px !important;
+        margin-top: 30px;
+    }
+
+    .missContentSub2 {
+        font-size: 15px !important;
+        padding: 0 20px 0 20px !important;
+        text-align: initial;
+        margin-top: 10px;
+    }
+
+    .missContent2{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .missContentSub1_sm {
+        font-size: 30px !important;
+        font-weight: bold;
+        padding: 0 30px 0 30px !important;
+        /*transform: translateY(-176px) !important;*/
+    }
+
+    .missContentSub2_sm {
+        font-size: 13px !important;
+        padding: 0 20px 0 20px !important;
+        text-align: initial;
+        margin-top: 10px;
+    }
+
+    /*About Us*/
+
+
+    .pageTitleContact.jcv1{
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+
+    }
+      .overlay1{
+        left: 10%!important;
+        right: 10%!important;
+    }
+
+
+   .userNameOverlay3.jcv1{
+        padding-right: 25px!important;
+
+    }
+  .pageTitleContact.jcv2{
+        font-size: 20px !important; 
+        padding: 10px!important;
+    }
+
+    .partnerLogoContent {
+        display: unset;
+        height: unset;
+        width: 50%;
+    }
+
+    .partnerLogoWrap {
+        height: 100px;
+        position: relative;
+    }
+
+    .partnerLogoWrap > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .partnerLogoWrap img {
+        width: unset;
+    }
+
+    .partnerLogoWrap#citiLogo {
+        margin-bottom: unset;
+    }
+    
+    .partnerLogoWrap#exxonMobileLogo {
+        margin-top: unset;
+    }
+    
+    .partnerLogoWrap#swissReLogo {
+        margin-bottom: unset;
+    }    
+
+    .partnerLogoWrap#kbrLogo {
+        margin-left: unset;
+    }    
+
+    .partnerLogo {
+        height: 80px;
+        width: 60%;
+        padding: 10px;
+    }
+
+    .homepageTitle {
+        font-size: 40px;
+    }
+
+    .partnerClient {
+        font-size: 30px;
+    }
+
+    .homepageSubTitle {
+        font-size: 15px;
+    }
+
+    .bannerImg {
+        height: 840px;
+    }
+
+    .banner2 {
+        height: unset;
+    }
+
+    .bannerImg.top {
+        height: 600px;
+    }
+
+    table.jointComputationalVantageEcosystem td, table th {
+        font-size: 12px !important;
+    }
+
+
+    .banner2 .content1 {
+        font-size: 18px;
+    }
+    .banner2 .content2 {
+        font-size: 14px;
+    }
+
+    .aboutUsImg1 {
+        width: 100px;
+    }
+
+    .aboutUsSection {
+        margin-top: unset;
+    }
+
+    .aboutUsContent1 {
+         transform: translateX(0); 
+    }
+
+    .aboutUsC1 {
+        width: 270px;
+    }
+
+    .aboutUsContent {
+        font-size: 14px;
+    }
+
+    .aboutUsContent1 {
+        height: 430px;
+        padding: 40px;
+    }
+
+    .aboutUsContent2 {
+        height: 365px;
+         transform: translateX(0); 
+         padding: 40px;
+    }
+
+    .missContent1, .missContent2 {
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .homepageContentbelow {
+        font-size: 14px !important;
+    }
+}

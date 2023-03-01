@@ -1,0 +1,31 @@
+[data-lang] {
+	position: relative;
+	display: inline-block;
+}
+
+[data-lang]:hover:after {
+	position: absolute;
+	content: attr(data-lang);
+	bottom: 100%;
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, sans-serif;
+	left: 30px;
+	padding: 2px 15px;
+	font-weight: lighter;
+	font-size: 14px;
+}
+
+[data-lang].bottom:hover:after {
+	position: absolute;
+	content: attr(data-lang);
+	top: 100%;
+	bottom: unset;
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, sans-serif;
+	left: 30px;
+	padding: 2px 15px;
+	font-weight: lighter;
+	font-size: 14px;
+}

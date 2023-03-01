@@ -1,0 +1,440 @@
+/* Overrides KT class to hide Settings in Menu @ PC media */
+
+@media (min-width: 1025px) {
+    .kt-header-menu .kt-menu__nav>.kt-menu__item.mobileMenuViewSettings {
+        display: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 .15rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .dbSection01 .carousel-control-next-icon {
+        transform: translateX(15px);
+    }
+
+    .dbSection01 .carousel-control-prev-icon {
+        transform: translateX(-15px);
+    }
+}
+/* Mobile View */
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .inputWidth {
+        width: 100%;
+    }
+
+    .sendCode {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .modalMsgIcon {
+        height: 35px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    #canvasMessage .modal-dialog{
+        max-width: 285px;
+    }
+
+    .modalBodyFont{
+        padding: 0px 25px 10px 25px;
+    }
+        
+    .btn.btn-primary, .btn.btn-default {
+        font-size: 12px;
+    }
+
+    .dbPaddingX {
+        padding-right: 30px; 
+        padding-left: 30px; 
+    }
+
+    .dbBanner {
+        height: 550px;
+        max-height: 550px;
+    }
+
+    .carousel-caption{
+        top: 4%;
+    }
+
+    .contentBg1, .contentBg2{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .circleBox{
+        height: 60px;
+        width: 60px;
+        font-size: 14px;
+    }
+
+    .walletBg{
+        background-size: cover;
+    }
+
+    .dashboardText1{
+        padding: 7px;
+    }
+
+    .rankWrapper {
+        width: 85%;
+    }
+
+    .dbSection01Content {
+        font-size: 12px;
+    }
+
+    .dbSection01Title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .dbRankCircleDes {
+        font-size: 20px;
+    }
+
+    .dbRankRoundDes {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    /*.rankWrapper {
+        position: relative;
+        top: 12%;
+        width: 65%;
+        top: 30px;
+    }*/
+
+    /*.userMemberID {
+        margin-left: calc(50px + 1rem);
+    }*/
+
+    .dbSection02 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dbSection02Title {
+        font-size: 22px;
+    }
+
+    .walletBoxTitle {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .walletBoxAmt {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .newsWrapper {
+        padding-top: 50px
+        padding-bottom: 50px
+    }
+
+    .bgShape::before {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 200px;
+        clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+    }
+
+    .bgShape.shape1::before {
+        top: 22px;
+        left: 155px;
+        background: #B48D36;
+    }
+
+    .bgShape.shape2::before {
+        top: 95px;
+        left: -10px;
+        background: #6898A8;
+    }
+
+    .dbNewsImg {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dbInfoTitle {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .dbInfoText {
+        font-size: 12px;
+    }
+
+    .dbInfoDes {
+        font-size: 12px;
+    }
+
+    .dbTableTitle {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    a.dbLink {
+        font-size: 12px;
+    }
+
+    .pageContent {
+        /*background-size: 300px;*/
+        padding-top: 30px;
+    }
+
+    .pageTitle {
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+    .packageDetails .priceRange {
+        font-size: 25px;
+    }
+
+    /*Table List */
+
+    .table {
+        font-size: 12px;
+    }
+
+    /*End table list */
+
+    #canvasMessage .modal-title, .modal .modal-content .modal-header .modal-title {
+        font-size: 14px;
+    }
+
+    .dbSection01TitleWrapper {
+        padding: 15px 10px;
+    }
+
+    .pageContent {
+       background-size: 100% 20%;
+    }
+
+    .contractSubMenu.active {
+        left: 15px!important;
+        top: 5px!important;
+    }
+
+    .communityBox:before{
+        height: 7px;
+        transform: translate(50px, 27px);
+    }
+
+    .countdownSectionWrap {
+        padding: 0 20px;
+    }
+
+    .countdownSectionWrap .headerText2 {
+        font-size: 20px;
+    }
+
+    .prizeWrapper {
+        width: 50%;
+    }
+
+    .prizeIcon2 {
+        width: 160px;
+        top: 0;
+    }
+
+    .prizeIcon {
+        width: 150px;
+    }
+
+    .prizeModalImg {
+        width: 180px;
+    }
+
+    .balanceText {
+        font-size: 14px;
+    }
+
+    .balanceText02 {
+        font-size: 14px;
+    }
+
+    .dbSection02Title02 {
+        display: none;
+    }
+
+    .dbSection02Title03 {
+        display: block;
+        font-size: 20px;
+    }
+
+    .comingSoonBg {
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .comingSoonTitle {
+        font-size: 20px;
+    }
+
+    .comingSoonLogo {
+        width: 30px;
+    }
+     .countdownsubTitle{
+        font-size: 40px;
+    }
+    .countdown2{
+        font-size: 40px;
+    }
+    .countdownTitle{
+        font-size: 20px;
+    }
+
+    .campaign-img-container {
+        margin: 0;
+    }
+
+    .imageBox {
+        width: 45% !important;
+        margin-top: 0 !important;
+    }
+
+    .remove-footer {
+        display: none;
+    }
+
+    .more-info-container {
+        margin-top: 0;
+    }
+
+    .profileBGContainer {
+        background-size: 100%;
+    }
+
+    .profileWrapper {
+        flex-direction: column;
+        margin-top: -450px;
+    }
+
+    .profileBgLeft {
+        width:100%;
+    }
+    .profileBgRight {
+        width:100%;
+    }
+
+    .editField {
+        flex-direction: column;
+    }
+
+    .pfDes {
+        margin-left:0px;
+        margin-right:10px;
+    }
+
+    .profileSection {
+        margin-top:-70px;
+    }
+
+    .profileBg {
+        border-top-right-radius:7px;
+        border-bottom-left-radius:0px;
+    }
+
+    .listingWrapper {
+        border-top-right-radius:0px;
+        border-bottom-left-radius:7px;
+    }
+}
+
+
+/* Ipad View */
+@media (min-width: 768px) and (max-width: 990px) {
+    .dbPaddingX {
+        padding-right: 50px; 
+        padding-left: 50px; 
+    }
+
+    .dbBanner {
+        height: 460px;
+    }
+
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        width: 10%;
+    }
+
+    /*.rankWrapper {
+        width: 45%;
+    }*/
+
+    /*.dbRankRoundDes {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .dbRankCircleDes {
+        font-size: 22px;
+    }*/
+
+    .packageDetails .priceRange {
+        font-size: 25px;
+    }
+
+    .communityBox:before{
+        height: 12px;
+        transform: translate(50px, 25px);
+    }
+
+    .countdownSectionWrap {
+        padding: 0 30px;
+    }
+     .countdownsubTitle{
+        font-size: 52px;
+    }
+    .countdown2{
+        font-size: 60px;
+    }
+    .countdownTitle{
+        font-size: 25px;
+    }
+
+}
+
+/* Ipad Pro View */
+@media (min-width: 991px) and (max-width: 1199px) {
+    .dbPaddingX {
+        padding-right: 50px; 
+        padding-left: 50px; 
+    }
+    
+    .dbBanner {
+        height: 520px;
+        max-height: 520px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .packageDetails .priceRange {
+        font-size: 24px;
+    }
+
+    .countdownSectionWrap {
+        padding: 0 50px;
+    }
+
+    .contentBg1, .contentBg2{
+        font-size: 18px;
+    }
+
+}

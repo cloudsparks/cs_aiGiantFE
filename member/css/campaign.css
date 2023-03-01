@@ -1,0 +1,189 @@
+.text-lg {
+  font-size: 68px!important;
+}
+
+.countdownContainer {
+  margin-bottom: 30x;
+}
+
+.align-res {
+  -webkit-box-align: center!important;
+  align-items: center!important;
+}
+
+.bidSpan {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.text-lighter {
+  color: rgba(255, 255, 255, .5);
+  font-weight: lighter;
+}
+
+.campaignFooter {
+  margin-top: 2rem;
+}
+
+.itemImgContainer {
+  align-items: center;
+}
+
+.font-lg {
+  font-size: 60px;
+}
+
+/* Participation Campaign */
+.partCampModalLabel {
+  font-size: 14px;
+}
+
+.partCampModalFont {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.partCampInput,
+.partCampInput:disabled {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: default;
+  border: transparent;
+}
+
+.listingPadding {
+  padding: 30px;
+}
+
+.imageBox{
+  height: 350px;
+  margin-top: 3rem;
+}
+
+.imageBox img {
+  width: 220px !important;
+}
+
+
+/* Mobile View */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Campaign section */
+  .countdownContainer {
+    margin-bottom: 20px;
+  }
+
+  .countdownContainer .countdownClock2,
+  .countdownContainer .countdownClock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .countdownContainer .countdownClock2 {
+    font-size: 32px;
+  }
+
+  .countdownContainer .countdownClock {
+    font-size: 20px;
+  }
+
+  .countdownsubTitle2 {
+    font-size: 20px;
+  }
+
+  .campaignDetail {
+    padding: 20px;
+  }
+
+  .campaignFooter {
+    padding: 20px;
+    margin-top: 1rem;
+  }
+
+  .block {
+    display: block!important;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  #campaignBtn {
+    padding-top: 12px;
+    margin-top: 2rem;
+  }
+
+  .imageBox > img {
+    width: 180px !important;
+  }
+
+  .dbSection01 .carousel-control-next-icon {
+    transform: translateX(10px);
+  }
+
+  .dbSection01 .carousel-control-prev-icon {
+    transform: translateX(-10px);
+  }
+}
+
+/* Ipad View */
+@media (min-width: 768px) and (max-width: 990px) {
+  .align-res {
+    -webkit-box-align: start!important;
+    align-items: flex-start!important;
+  }
+
+  .countdownContainer .countdownClock2 {
+    font-size: 25px;
+  }
+
+  .countdownContainer .countdownClock {
+    font-size: 18px;
+  }
+  
+  .text-md {
+    font-size: 50px!important;
+  }
+
+  .imageBox > img {
+    width: 190px !important;
+  }
+}
+
+/* Ipad Pro View */
+@media (min-width: 991px) and (max-width: 1199px) {
+  .align-res {
+    -webkit-box-align: start!important;
+    align-items: flex-start!important;
+  }
+
+  .countdownContainer .countdownClock2 {
+    font-size: 52px;
+  }
+
+  .countdownContainer .countdownClock {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .imageBox > img {
+    width: 80%;
+  }
+}
+
+.campaign-margin {
+  margin-bottom: 1rem;
+}
+
+.description-modal-body {
+  overflow : auto;
+}
+
+.modal-overflow-none {
+  overflow: hidden !important;
+}
+
+.modal-height-max {
+  max-height: 550px;
+}

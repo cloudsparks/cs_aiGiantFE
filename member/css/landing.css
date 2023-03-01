@@ -1,0 +1,524 @@
+.landingSection01 {
+    background-color: #192e57;
+    padding-top: 0px;
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.landingSection01Img {
+    background-image: url(../images/alpharoc/landing/landingSection01.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: absolute;
+    width: 100%;
+    -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+}
+
+.landingSection01Title {
+    font-weight: 600;
+    color: #2a3957;
+    font-size: 35px;
+}
+
+.landingMoreBtn {
+    font-weight: 300;
+    color: #fff;
+    font-size: 17px;
+    background-color: #46a6bc;
+    padding: 10px 20px;
+    border-radius: unset;
+    border: unset;
+}
+
+.landingSection02 {
+    background-color: #f4f8ff;
+    padding-bottom: 30px;
+    padding-top: 230px;
+}
+
+.landingTitleLine {
+    width: 50px;
+    height: 5px;
+    background-color: #8bddc9;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.landingTitleLine2 {
+    width: 50px;
+    height: 5px;
+    background-color: #8bddc9;
+    border-radius: 20px;
+}
+
+.landingSection02Title {
+    font-weight: 600;
+    font-size: 25px;
+    color: #2a3957;
+}
+
+.landingSection02Desc {
+    font-weight: 300;
+    font-size: 15px;
+    color: #808080;
+    word-break: break-all;
+}
+
+.userImgSize {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.userImg {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.userCircle {
+    height: 50px;
+    width: 50px;
+    background-color: #46a6bc;
+    position: absolute;
+    bottom: 0;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.companyVideoWidth {
+    width: 500px;
+    height: 300px;
+}
+
+.landingSection04 {
+    background-color: #f4f8ff;
+    padding-bottom: 100px;
+}
+
+.personalVideoWidth {
+    height: 200px;
+}
+
+.landingSection05 {
+    margin-top: -50px;
+}
+
+.landingSection05Box {
+    background-color: #fff;
+    padding: 20px 50px;
+    text-align: center;
+    -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+}
+
+.landingSection07Box {
+    background-color: #e4faff;
+    padding: 20px 50px;
+    text-align: center;
+    -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .landingSection07Box {
+        background-color: #e4faff;
+        padding: 10px 20px;
+        text-align: center;
+        -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    }
+}
+
+.landingSection05Link {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+
+.landingSection05LinkText {
+    color: #46a6bc;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.landingSection06 {
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+
+.landingIcon {
+    width: 70px;
+}
+
+.landingIine {
+    width: 100px;
+}
+
+.landingSection06Box1 {
+    width: 15%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.landingSection06Box2 {
+    width: 13.333%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.landingSection06Box3 {
+    width: 15%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.landingSection06Box4 {
+    width: 13.333%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.landingSection06Box5 {
+    width: 15%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.landingSection06Box6 {
+    width: 13.333%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.landingSection06Box7 {
+    width: 15%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.landingSection07 {
+     margin-top: -50px;
+}
+
+.landingSection07SignUp {
+    font-weight: 600;
+    color: #46a6bc;
+    font-size: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.landingSignUpIcon {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.landingSection08 {
+    background-color: #2a3957;
+    padding-top: 100px;
+    margin-top: -30px;
+}
+
+.landingSection09 {
+    background-color: #000;
+    padding: 5px;
+}
+
+.landingFooter {
+    font-weight: 300;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+    .landingSection01Img {
+        background-image: url(../images/alpharoc/landing/landingSection01.jpg);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        padding-top: 20px;
+        padding-bottom: 300px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: unset;
+        width: 100%;
+        -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    }
+
+    .landingSection06Box2 {
+        display: none;
+    }
+
+    .landingSection06Box4 {
+        display: none;
+    }
+
+    .landingSection06Box6 {
+        display: none;
+    }
+
+
+
+    .landingSection06Box1 {
+        width: 25%;
+        text-align: center;
+    }
+
+   
+
+    .landingSection06Box3 {
+        width: 25%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+
+    .landingSection06Box5 {
+        width: 25%;
+        text-align: center;
+    }
+
+
+    .landingSection06Box7 {
+        width: 25%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+
+    .landingSection06Box2 {
+        display: none;
+    }
+
+    .landingSection06Box4 {
+        display: none;
+    }
+
+    .landingSection06Box6 {
+        display: none;
+    }
+
+
+
+    .landingSection06Box1 {
+        width: 25%;
+        text-align: center;
+    }
+
+    
+
+    .landingSection06Box3 {
+        width: 25%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+
+    .landingSection06Box5 {
+        width: 25%;
+        text-align: center;
+    }
+
+
+    .landingSection06Box7 {
+        width: 25%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .landingSection02 {
+        padding-top: 200px;
+    }
+    .landingSection01Img {
+        background-image: url(../images/alpharoc/landing/landingSection01_mobile.jpg);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        padding-top: 20px;
+        padding-bottom: 300px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: unset;
+        width: 100%;
+        -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    }
+
+    .userImg {
+        position: unset;
+    }
+
+    .landingTitleLine2 {
+        margin: 0 auto;
+    }
+
+    .textalignSection04 {
+        text-align: center;
+    }
+
+    .personalVideoWidth {
+        margin-top: 20px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .companyVideoWidth {
+        width: 100%;
+        height: auto;
+    }
+
+    .landingSection06Box2 {
+        display: none;
+    }
+
+    .landingSection06Box4 {
+        display: none;
+    }
+
+    .landingSection06Box6 {
+        display: none;
+    }
+
+
+
+    .landingSection06Box1 {
+        width: 50%;
+        text-align: center;
+    }
+
+    
+
+    .landingSection06Box3 {
+        width: 50%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+
+    .landingSection06Box5 {
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    .landingSection06Box7 {
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .landingSection02 {
+        padding-top: 200px;
+    }
+    .landingSection01Img {
+        background-image: url(../images/alpharoc/landing/landingSection01_mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: unset;
+        width: 100%;
+        -webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.3);
+    }
+
+    .userImg {
+        position: unset;
+    }
+
+    .landingTitleLine2 {
+        margin: 0 auto;
+    }
+
+    .textalignSection04 {
+        text-align: center;
+    }
+
+    .personalVideoWidth {
+        margin-top: 20px;
+    }
+
+    .landingSection01Title {
+        font-size: 20px;
+    }
+
+    .landingSection02 {
+        padding-top: 50px;
+    }
+
+    .personalVideoWidth {
+        height: auto;
+        width: 100%;
+    }
+
+    .landingSection02Title {
+        font-size: 20px;
+    }
+
+    .landingSection05Box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .landingSection06 {
+        margin-top: 40px;
+    }
+
+    .landingSection07SignUp {
+        font-size: 20px;
+    }
+}
+
+.landingLanguageSection {
+    background-color: #192e57;
+    padding: 10px;
+}
+
+.languageFont {
+    font-weight: 300;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.languageBox {
+    text-align: right;
+}
+
+.landingSignUpBtn {
+    border: unset;
+    background-color: transparent;
+    padding: 0;
+
+}
