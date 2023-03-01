@@ -417,7 +417,7 @@
 .form-group label {
     font-size: 14px;
     font-weight: 500;
-    color: #000;
+    color: #767A7C;
 }
 
 .mt_x {
@@ -1099,7 +1099,7 @@
 }
 
 .loginForm {
-    padding: 50px;
+    padding: 0 50px;
     text-align: center;
 }
 
@@ -1179,15 +1179,37 @@
       font-size: 14px;
   }
 
+.form-control {
+    margin-bottom: 20px;
+}
+
 .form-control:disabled, .form-control[readonly]{
-    background-color: #ddd;
+    background-color: transparent;
 }
 
 .form-control, .form-control:focus {
     background-clip: unset;
-    border-color: #fff;
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 1px solid #fff;
     border-radius: 0;
+    background-color: transparent;
+    color: #767A7C!important;    
 }
+
+.selectBox:after{
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  content: "";
+  z-index: 98;
+ }
 
 .formTitle {
     text-transform: uppercase;
@@ -1204,16 +1226,20 @@
     cursor: pointer;
 }
 
+.input-group-prepend {
+    border-bottom: 1px solid #fff;
+}
+
 .input-group-text {
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 0;
     padding: .65rem 1rem;
 }
 
 .loginFont01 {
-    font-weight: 600;
+    font-weight: 300;
     color: #fff;
-    font-size: 65px;
+    font-size: 20px;
 }
 
 .loginFont02 {
@@ -1255,7 +1281,7 @@
 }
 
 .btn.btn-login:hover, .btn.btn-login:active {
-    background: #146DEF;
+    background: #4FB2F3;
     color: #fff;
     border: 0.8px white solid;
 }
@@ -1265,7 +1291,8 @@
     /* background: linear-gradient(180deg, rgba(225, 168, 26, 1) 0%, rgba(190, 135, 0, 1) 100%); */
     border: none;
     /* width: 100%; */
-    min-width: 120px;
+    min-width: 35%;
+    border-radius: 25px;
     letter-spacing: 0;
     font-size: 15px;
 }
@@ -1371,10 +1398,14 @@ background: linear-gradient(90deg, rgba(98,186,232,1) 0%, rgba(63,104,176,1) 100
     border: unset;
     padding: unset;
     margin: unset;
-	font-weight: 500;
-	font-size: 13px;
-    color: #0077FF;
+	font-weight: 300;
+	font-size: 12px;
+    color: #4FB2F3;
     text-decoration: underline;
+}
+
+.forgotPasswordBtn:hover {
+    color: #4FB2F3;
 }
 
 .loginIMG {
@@ -1604,9 +1635,22 @@ width: 100%;
 .loginLogo {
 display: block;
 margin: 10px auto;
-width: 170px;
+width: 100px;
        max-width: 100%;
 }
+
+.loginMask {
+    padding: 20px 40px;
+    background: rgba(0,0,0, 0.3);
+    border-radius: 20px;
+}
+
+.regMask {
+    padding: 0 30px;
+    background: rgba(0,0,0, 0.3);
+    border-radius: 20px;
+}
+
 
 .loginLogo.registration {
 	/* display: block; */

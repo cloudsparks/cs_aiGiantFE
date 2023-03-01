@@ -5,106 +5,98 @@
 
 <body  class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
-    <section>
+    <section class="loginPage">
+        <div class="w-100 p-2">
+            <div class="btn-group languageDropdown">
+                <span type="" class="languageFont" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor: pointer;">
+                    <img class="mr-3" src="images/project/globe.png" alt="" width="20px">
+                    <span><?php echo $config["languages"][$language]['displayName'] ?></span>
+                    <span><i class="fa fa-angle-down ml-3" style="color: black;"></i></span>
+                </span>
+                <div class="dropdown-menu dropdown_language">
+                    <?php $languages = $config['languages']; ?>
+                    <?php foreach($languages as $key => $value) { 
+                        if ($key=="chineseSimplified" || $key=="chineseTraditional") {
+                            $flag="chinese";
+                        }else if ($key == "korean"){
+                            $flag="korean";
+                        }else if ($key == "vietnam"){
+                            $flag="vietnam";
+                        }else if ($key == "japanese"){
+                            $flag="japanese";
+                        }else if($key == 'english'){
+                            $flag="english";
+                        }else if ($key == "thailand"){
+                            $flag="thai";
+                        }
+                        ?>
+                        <a href="javascript:void(0)" class="changeLanguage dropdown-item" language="<?php echo $key; ?>" style="margin-top: 0;margin-bottom: 0;">
+                            <img style="width: 20px;margin-right: 5px;" src ="images/language/<?php echo $flag; ?>.png">
+                            <?php echo $languages[$key]['displayName']; ?>
+                        </a>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
         <div class="kt-container loginWrap">
-            <div class="col-12">
-                <div class="row h-100">
-                    <div class="col-12 col-md-6 loginPage">
-                        <div class="loginCenterText">
-                            <div class="loginFont01">
-                                <?php echo $translations['M03664'][$language]; //Welcome ?>!
-                            </div>
-                            <div class="loginFont02 ml-5">
-                                <?php echo $translations['M03665'][$language]; //Live Healthy and earn money easily ?>!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6" style="background-color: #F4F5F7;">
+            <div class="col-12 mx-auto">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-5">
                         <div class="loginForm">
-                            <div class="col-12 px-md-5 px-0">
-                                <div class="row">
-                                    <div class="w-100">
-                                        <div class="btn-group languageDropdown">
-                                            <span type="" class="languageFont" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor: pointer;">
-                                                <img class="" src="images/project/globe.png" alt="" width="20px">
-                                                <span><i class="fa fa-angle-down ml-2" style="color: black;"></i></span>
-                                            </span>
-                                            <div class="dropdown-menu dropdown_language">
-                                                <?php $languages = $config['languages']; ?>
-                                                <?php foreach($languages as $key => $value) { 
-                                                    if ($key=="chineseSimplified" || $key=="chineseTraditional") {
-                                                        $flag="chinese";
-                                                    }else if ($key == "korean"){
-                                                        $flag="korean";
-                                                    }else if ($key == "vietnam"){
-                                                        $flag="vietnam";
-                                                    }else if ($key == "japanese"){
-                                                        $flag="japanese";
-                                                    }else if($key == 'english'){
-                                                        $flag="english";
-                                                    }else if ($key == "thailand"){
-                                                        $flag="thai";
-                                                    }else if ($key == "italian"){
-                                                        $flag="italy";
-                                                    }else if ($key == "malay"){
-                                                        $flag="indonesia";
-                                                    }
-                                                    ?>
-                                                    <a href="javascript:void(0)" class="changeLanguage dropdown-item" language="<?php echo $key; ?>" style="margin-top: 0;margin-bottom: 0;">
-                                                        <img style="width: 20px;margin-right: 5px;" src ="images/language/<?php echo $flag; ?>.png">
-                                                        <?php echo $languages[$key]['displayName']; ?>
-                                                    </a>
-                                                <?php } ?>
+                            <div class="col-12 px-0">
+                                <a href="/login">
+                                    <img src="images/logo/logo2.png" class="loginLogo">
+                                </a>
+                                <div class="loginMask">
+                                    <div class="row">
+                                        <div class="col-12 mt-4 mb-4 text-center loginFont01">
+                                            Welcome Back
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                                </div>
+                                                <input id="username" type="text" class="form-control" placeholder="<?php echo $translations['M00001'][$language]; //Username ?>">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12 text-left loginFont03 mb-3">
-                                        <?php echo $translations['M03698'][$language]; //Login to your account ?>  
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                        <div class="col-12 mt-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                                                </div>
+                                                <input id="password" type="password" class="form-control" placeholder="<?php echo $translations['M00002'][$language]; //Password ?>">
+                                                <i class="far fa-eye eyeIco"></i>
                                             </div>
-                                            <input id="username" type="text" class="form-control" placeholder="<?php echo $translations['M00001'][$language]; //Username ?>">
                                         </div>
-                                    </div>
-                                    <div class="col-12 mt-5">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                                        <div class="col-12 text-right">
+                                            <a href="resetPassword" class="btn forgotPasswordBtn"><span data-lang='M00203'><?php echo $translations['M00203'][$language]; //Forgot password? ?></span></a>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend" style="margin-bottom: 3px;">
+                                                    <div class="input-group-text"><i class="fa fa-shield"></i></div>
+                                                </div>
+                                                <input id="captcha" type="text" class="form-control" placeholder="<?php echo $translations['M00003'][$language]; //Security Code ?>">
+                                                <div class="input-group-append">
+                                                    <img id="captchaImage" class="ml-2" src="captcha.php?" style="width: 100px;">
+                                                </div>                                            
                                             </div>
-                                            <input id="password" type="password" class="form-control" placeholder="<?php echo $translations['M00002'][$language]; //Password ?>">
-                                            <i class="far fa-eye eyeIco"></i>
                                         </div>
-                                    </div>
-                                    <div class="col-12 text-right">
-                                        <a href="resetPassword" class="btn forgotPasswordBtn"><span data-lang='M00203'><?php echo $translations['M00203'][$language]; //Forgot password? ?></span></a>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-shield"></i></div>
-                                            </div>
-                                            <input id="captcha" type="text" class="form-control" placeholder="<?php echo $translations['M00003'][$language]; //Security Code ?>">
-                                            <div class="input-group-append">
-                                                <img id="captchaImage" class="ml-2" src="captcha.php?" style="width: 100px;">
-                                                <i id="secureCodeRefresh" class="la la-refresh refreshCode"></i>
-                                            </div>                                            
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12 mt-5 text-center">
-                                        <button id="loginBtn" class="btn btn-login" data-lang='M00374'><?php echo $translations['M00374'][$language]; //Login ?></button>
-                                    </div>
-                                    <div class="col-12 mt-3 text-center">
-                                        <span style="color: #333333;"> Do not have an account?</span>
-                                        <a class="sign-up-text ml-1" href="publicRegistration" data-lang=''>
-                                            <?php echo $translations['M03699'][$language]; //Register Now! ?>
-                                        </a>
                                         
+                                        <div class="col-12 mt-5 text-center">
+                                            <button id="loginBtn" class="btn btn-login" data-lang='M00374'><?php echo $translations['M00374'][$language]; //Login ?></button>
+                                        </div>
+                                        <div class="col-12 mt-3 text-center">
+                                            <span>Do not have an account?</span>
+                                            <a class="btn forgotPasswordBtn ml-1" href="publicRegistration" data-lang=''>
+                                                Register Now!
+                                            </a>
+                                            
+                                        </div>
                                     </div>
                                 </div>
+                                    
                             </div>
                         </div>
                     </div>
@@ -239,7 +231,6 @@
                     localStorage.removeItem("jvcPassword", password);
                 }
                 window.location.href = "dashboard";
-                localStorage.setItem("displayAds", 1);
             }
             else {
                 refreshCaptcha();

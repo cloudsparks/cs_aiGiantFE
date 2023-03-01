@@ -1486,7 +1486,7 @@ table.dataTable.dtr-column>tbody>tr>td.control:before, table.dataTable.dtr-colum
 .form-control:-webkit-autofill:focus, 
 .form-control:-webkit-autofill:active {
     background-color: transparent !important;
-    -webkit-text-fill-color: #000;
+    -webkit-text-fill-color: #fff;
     -webkit-transition-delay: 99999s;
     -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
 }
