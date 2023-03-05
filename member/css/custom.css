@@ -74,7 +74,7 @@ body {
 body {
     color: #000;
     font-size: 12px;
-    background: #fff;
+    background: #F1F4F7;
 }
 
 .w3-btn,
@@ -685,12 +685,12 @@ a.dbLink:hover {
 }
 
 .table thead tr {
-    background-color: #146DEF;
+    background-color: #F8F9FC;
 }
 
 .table th {
-    font-weight: 600!important;
-    color: #fff;
+    font-weight: 300!important;
+    color: #000;
 }
 
 .table td {

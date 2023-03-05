@@ -17,162 +17,124 @@ $stopRecord = $_SESSION["stopRecord"];
 
 <link href="css/dashboard.css?v=<?php echo filemtime('css/dashboard.css'); ?>" rel="stylesheet" type="text/css" />
 
-<div id="popUpVideoModal" class="popUpModal modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="exampleModalLabel" style="display: none;">
-  	<div class="modal-dialog modalWidth" role="document">
-	    <div class="modal-content">
-	    	<button type="button" class="close popUpModalClose adClose" onClick="closeModal('${k}')" data-dismiss="modal" aria-label="Close">&times;</button>
-	        <div class="col-12 modal-body text-center" style="overflow-x: hidden;">
-		        <div id="demo2" class="carousel slide" data-ride="carousel">
-				  <ul id="indicatorsDisplay" class="carousel-indicators mt-4">
-				  	
-				  </ul>
-				  
-				  <!-- The slideshow -->
-				  <div class="carousel-inner">
-				  	<div id="adDisplay" class="adMargin">
-				  		
-				  	</div>
-				  </div>
-				  
-				  <!-- Left and right controls -->
-				  <!-- <a class="carousel-control-prev leftArrow" href="#demo2" data-slide="prev">
-				    <span class="carousel-control-prev-icon"></span>
-				  </a>
-				  <a class="carousel-control-next rightArrow" href="#demo2" data-slide="next">
-				    <span class="carousel-control-next-icon"></span>
-				  </a> -->
-				</div>
-	        </div>
-	    </div>
-  	</div>
-</div>
+
 
 <div class="kt-container">
-	<div class="col-12 px-0">
-		<div class="usernameDisplay">
-			<?php echo $translations['M01445'][$language]; /* Welcome Back */ ?>, <span style="font-weight: 600;"><?php echo $_SESSION['username'] ?></span>
-			<div class="currentTime" style="float: right;"></div>
-		</div>
-		
-	</div>
-	<div id="demo" class="carousel slide" data-ride="carousel">
-	  <ul class="carousel-indicators">
-	    <li data-target="#demo" data-slide-to="0" class="active"></li>
-	    <li data-target="#demo" data-slide-to="1"></li>
-	    <li data-target="#demo" data-slide-to="2"></li>
-	    <!-- <li data-target="#demo" data-slide-to="3"></li> -->
-	  </ul>
-	  
-	  <!-- The slideshow -->
-	  <div class="carousel-inner">
-	    <div class="carousel-item active">
-	      <img src="../images/banner1.webp" alt="banner1" class="bannerSliderImg">
-	      <div class="bannerDisplay">
-			<!-- <div class="bannerFont01 text-center">
-				Sales 30% off
-			</div>	  
-			<div class="bannerFont02">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			</div>	  -->     	    	
-	      </div>
-	    </div>
-	    <div class="carousel-item">
-	      <img src="../images/bgBanner_6.jpeg" alt="banner2" class="bannerSliderImg">
-	      <div class="bannerDisplay">
-			<!-- <div class="bannerFont01 text-center">
-				Slide 2
-			</div>	  
-			<div class="bannerFont02">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			</div> -->	      	    	
-	      </div>
-	    </div>
-	    <div class="carousel-item">
-	      <img src="../images/bgBanner_5.jpg" alt="bgBanner_2" class="bannerSliderImg">
-	      <div class="bannerDisplay">
-			<!-- <div class="bannerFont01 text-center">
-				Slide 3
-			</div>	  
-			<div class="bannerFont02">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			</div>	    -->   	    	
-	      </div>
-	    </div>
-	    <!-- <div class="carousel-item">
-	      <img src="../images/bgBanner_4.jpeg" alt="banner4" class="bannerSliderImg">
-	      <div class="bannerDisplay">
-			<div class="bannerFont01 text-center">
-				Slide 3
-			</div>	  
-			<div class="bannerFont02">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			</div>	      	    	
-	      </div>
-	    </div> -->
-	  </div>
-	  
-	  <!-- Left and right controls -->
-	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-	    <span class="carousel-control-prev-icon"></span>
-	  </a>
-	  <a class="carousel-control-next" href="#demo" data-slide="next">
-	    <span class="carousel-control-next-icon"></span>
-	  </a>
-	</div>
-	<div class="col-12 mt-5">
-		<div>
-			<div class="dashboardTitle1">
-				<?php if (!in_array("My Wallet", $_SESSION['blockedRights']))  { ?>
-					<span data-lang="M00415"><?php echo $translations['M00415'][$language]; //My Wallet ?></span>
-				<?php } ?>
-			</div>
-			<div class="row justify-content-center" id="walletSection">
-			</div>
-		</div>
-	</div>
-	<div class="col-12 mt-5 mb-5">
-		<div class="dashboardTitle1 mt-5"><?php echo $translations['M03706'][$language]; //Choose the best plan for you ?></div>
-
-		<div id="productDisplay" class="row justify-content-center mt-5"></div>
-		<div class="d-flex justify-content-center">
-			<div>
-				<img src="/images/calender_icon.png" class="mt-3 mr-3">
-				<div id="totalAccumulated" class="totalAccumulated2"></div>
-			</div>
-			<span data-lang="M00985" class="dashboardTitle1 mt-4"><?php echo $translations['M03714'][$language] /*Our Course*/ ?></span>
-		</div>
-		<!-- <div class="dashboardTitle2"><?php echo $translations['M03716'][$language]; //Flexible options to suit any business ?></div> -->
-		<div class="row justify-content-center mt-5">
-			<div id="videoDisplay" class="row justify-content-center"></div>
-		</div>
-	</div>
-	<!-- Banner stop -->
-
-
-
-	<!-- 
-	<section class="dbSection03">
-		<div class="walletBg">
-			
-			<div>
-				<div class="dbSection02Title whiteText">
-					<?php if (!in_array("My Wallet", $_SESSION['blockedRights']))  { ?>
-						<span data-lang="M00415"><?php echo $translations['M00415'][$language]; //My Wallet ?></span>
-					<?php } ?>
+	<div class="row p-md-0 p-5">
+		<div class="col-12 mt-5">
+			<div id="walletSection" class="row justify-content-center">
+				<div class="col-md-3">
+					<div class="dashboard_user_display">
+						<div class="row">
+							<div class="col-12 mt-4">
+								<div class="dashboard_text01 mb-2 text-center">
+									Welcome Back to AI Giant
+								</div>
+								<div class="seperateLine"></div>
+								<div class="dashboard_text02 mt-1 text-center">
+									<?php echo $_SESSION['username'] ?>
+								</div>
+								<div class="dashboard_text03 mb-4 text-center">
+									Joined 12-02-2022
+								</div>
+								<div class="seperateLine2"></div>
+							</div>
+						</div>
+						<div class="row px-2 pt-3 mt-3">
+							<div class="col-6 seperateLine3">
+								<img src="/images/dashboard_icon01.png" class="mt-2 ml-3 mr-3" style="float: left;">
+								<div class="dashboard_text03 ml-5">Ranking</div>
+								<div class="dashboard_text04 ml-5">Manager</div>
+							</div>
+							<div class="col-6">
+								<img src="/images/dashboard_icon02.png" class="mt-2" style="float: left;">
+								<div class="dashboard_text03 ml-5">Total Investment</div>
+								<div class="dashboard_text04 ml-5">11,234.00</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="row justify-content-center" id="walletSection">
-				paypalPrice = data.totalPric;	</div>
+				
 			</div>
+			
 		</div>
 		
-	</section> -->
-	<!-- JavaScript Bundle with Popper -->
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-	<?php include 'footerDashboard.php'; ?>
-</div>
+		<div class="col-md-7 col-12 mt-5 pl-5">
+			<div class="portfolioDisplay">
+				<a href="javascript:;" class="portfolioViewMore">
+					View More
+				</a>
+				<div class="dashboard_text05">
+					<?php echo $translations['A01291'][$language]; /* Portfolio */ ?>
+				</div>
+				<form>
+			        <div id="basicwizard" class="pull-in col-12 mt-4 px-0">
+			            <div class="tab-content b-0 m-b-0 p-t-0">
+			                <div id="alertMsg" class="text-center" style="display: block;"></div>
+			                <div id="portfolioDiv" class="table-responsive"></div>
+			                <span id="paginateText"></span>
+			                <div class="text-center">
+			                    <ul class="pagination pagination-md" id="pagerList"></ul>
+			                </div>
+			            </div>
+			        </div>
+			    </form>
 
+			</div>
+			
+		</div>
+		<div class="col-md-5 col-12 mt-5 px-4">
+			<div class="newsDisplay">
+				<div class="row">
+					<div class="col-12 dashboard_text05">
+						Latest <?php echo $translations['M00030'][$language]; /* News */ ?>
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-5">
+						<img src="/images/news_image01.png" class="newsImage">
+					</div>
+					<div class="col-7 newsContent01">
+						<div class="news_text01">
+							Lorem ipsum dolor sit
+						</div>
+						<div class="news_text02">
+							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5">
+						<img src="/images/news_image02.png" class="newsImage">
+					</div>
+					<div class="col-7 newsContent01">
+						<div class="news_text01">
+							Lorem ipsum dolor sit
+						</div>
+						<div class="news_text02">
+							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5">
+						<img src="/images/news_image03.png" class="newsImage">
+					</div>
+					<div class="col-7 newsContent01">
+						<div class="news_text01">
+							Lorem ipsum dolor sit
+						</div>
+						<div class="news_text02">
+							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<?php include 'footer.php'; ?>
 </body>
 
 
@@ -324,89 +286,10 @@ var thArray  = Array(
 	'<span data-lang="M00011" class="bottom"><?php echo $translations['M00011'][$language]; ?></span>', //Status
 );
 
-var thArrayVoucher  = Array(
-	'<span data-lang="M03646" class="bottom"><?php echo $translations['M03646'][$language]; ?></span>', //Voucher code
-	'<span data-lang="M03647" class="bottom"><?php echo $translations['M03647'][$language]; ?></span>', //Voucher BV
-	'<span data-lang="M00011" class="bottom"><?php echo $translations['M00011'][$language]; ?></span>', //Status
-	'<span data-lang="M03644" class="bottom"><?php echo $translations['M03644'][$language]; ?></span>', //Redeemed By
-	'<span data-lang="M03645" class="bottom"><?php echo $translations['M03645'][$language]; ?></span>', //Redeemed Date
-	
-);
-
 var translations = <?php echo json_encode($translations)?>;
 var language = "<?php echo $language?>";
 
 $(document).ready(function(){
-
-	var formData  = {
-	    command: 'videoList',
-		// inputData: searchData,
-	};
-	var fCallback = loadVideo;
-	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
-
-	var displayAds = localStorage.getItem("displayAds");
-
-	if (displayAds == 1) {
-			var formData  = {
-			    command: 'advertisementList',
-				// inputData: searchData,
-			};
-			var fCallback = loadAd;
-			ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);	
-
-		localStorage.setItem("displayAds", 0);
-	}	
-
-	for( var i=10 ;i<=90; i=i+10){
-      $("#depositAmtSelect").append('<option value="'+ i +'">'+ i +'%</option>');
-    }
-
- //    $(".myVideoOverlay").click(function(){
-		
-	// });
-	
-	$('#walletBtn').click(function() {
-		$('#walletBtn').addClass('active');
-		$('#bonusBtn').removeClass('active');
-		$('#walletID').show();
-		$('#bonusID').hide();
-	})
-
-	$('#bonusBtn').click(function() {
-		$('#walletBtn').removeClass('active');
-		$('#bonusBtn').addClass('active');
-		$('#walletID').hide();
-		$('#bonusID').show();
-	})
-
-	$('.packageType').click(function() {
-		$('.packageType').removeClass('active');
-		$(this).addClass('active');
-
-		packageType = $('.packageType.active').attr('packageType');
-
-		if(packageType == 'contract'){
-			$('#contractSelect').show();
-		}else{
-			$('#contractSelect').hide();
-		}
-	})
-
-	$('.portfolioType').click(function() {
-		$('.portfolioType').removeClass('active');
-		$(this).addClass('active');
-
-		var portfolioType = $('.portfolioType.active').attr('portfolioType');
-
-		if(portfolioType == 'portfolio'){
-			$('.portfolioListing').show();
-			$('.portfolioContractListing').hide();
-		}else{
-			$('.portfolioListing').hide();
-			$('.portfolioContractListing').show();
-		}
-	})
 
 	var formData  = {
 	    command: 'getDashboard'
@@ -414,11 +297,7 @@ $(document).ready(function(){
 	var fCallback = loadDefaultListing;
 	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
 
-	var formData  = {
-	    command: 'getPackageProductList'
-	};
-	var fCallback = loadProductListing;
-	// ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
+	
 
 	if ( $(window).width() >= 1200 ) {
 		const slider = document.querySelector('.items');
@@ -483,21 +362,7 @@ $(document).ready(function(){
 });
 
 // $(document).on('click','.quickSelectItem', function(){
-function selectItem(e){
-	$(".quickSelectItem").removeClass("active");
-	$(e).addClass("active");
 
-	var type = $(e).attr("data-type");
-	var amt = $(e).attr("data-amt");
-
-	if(type == "fix") {
-		$('#creditUnitInp').val(amt);
-		$('#creditUnitInp2').val(amt);
-	}else{
-		$('#creditUnitInp').val("");
-		$('#creditUnitInp2').val("");
-	}
-}
 
 
 function loadDefaultListing(data, message) {
@@ -511,8 +376,6 @@ function loadDefaultListing(data, message) {
 	}else {
 		var newBlocked = ''
 	}
-
-	if (data.productList && data.productList.length > 0) loadProductListing(data.productList);
 
 	if (data.wallet) {
 		var buildWallet = "";
@@ -596,63 +459,33 @@ function loadDefaultListing(data, message) {
 				rightName = creditType;
 
 				if(blockedItem.indexOf('hiddenWallet') == -1){ 
-						if (v['type'] == "USDT") {
-							buildWallet +=`
+						buildWallet +=`
 						
-								<div class="col-12 col-md-5 my-4">
-									<div class="walletBox">
-										<div class="col-12 px-0">
-											<div class="mt-3" style="float: right;">
-												<a href="javascript:;" class="walletMoreBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-													<img src="/images/project/downArrow.png" alt="More" width="25px">
+								<div class="col-12 col-md-3 mt-md-0 mt-4">
+									<div class="walletBoxDisplay${walletNumber}">
+										<div class="col-12 text-center">
+											<div class="walletTitle${walletNumber}">
+												Wallet ${walletNumber}
+											</div>
+											<div class="walletBox_balance${walletNumber} mt-3">
+												${numberThousand(v['balance'], 2)}									
+											</div>
+											<div class="walletBox_credit${walletNumber}">
+												${creditDisplay}
+											</div>
+											<div class="mt-5 mb-1">
+												<a href="javascript:;" class="wallet_viewmore${walletNumber}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+													View More
 												</a>
 												<div class="dropdown-menu walletDropdown dropdown-menu-right" role="menu" >
 													${buildMenu}
 												</div>
 											</div>
-											<div class="walletBoxAmt mt-3">
-												${numberThousand(v['balance'], 2)} Points									
-											</div>
-											<div class="walletBoxTitle mt-4">
-												${creditDisplay}
-											</div>
-											
 										</div>
 									</div>
-									<div class="walletBtnWrap" style="background-color: #146DEF;">
-										
-									</div>
+									<div class="walletBorder${walletNumber}"></div>
 								</div>
 							`;	
-						} else {
-							buildWallet +=`
-						
-								<div class="col-12 col-md-5 my-4">
-									<div class="walletBox2">
-										<div class="col-12 px-0">
-											<div class="mt-3" style="float: right;">
-												<a href="javascript:;" class="walletMoreBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-													<img src="/images/project/downArrow.png" alt="More" width="25px">
-												</a>
-												<div class="dropdown-menu walletDropdown dropdown-menu-right" role="menu" >
-													${buildMenu}
-												</div>
-											</div>
-											<div class="walletBoxAmt mt-3">
-												${numberThousand(v['balance'], 2)} Points									
-											</div>
-											<div class="walletBoxTitle mt-4">
-												${creditDisplay}
-											</div>
-											
-										</div>
-									</div>
-									<div class="walletBtnWrap" style="background-color: #54F411;">
-										
-									</div>
-								</div>
-							`;	
-						}
 				}
 				// ${addCommas(Number(v['balance']).toFixed(v['decimal']))}
 
@@ -661,7 +494,7 @@ function loadDefaultListing(data, message) {
 			
 
 		});
-		$('#walletSection').html(buildWallet);
+		$('#walletSection').append(buildWallet);
 		// $('.bonusSection').html(buildWallet);
 
 		
@@ -726,49 +559,6 @@ function loadDefaultListing(data, message) {
 	}
 	
 
-}
-
-function loadProductListing(data, message) {
-	console.log(data);
-	let productString = '';
-	var i = 1;
-	$.each(data, function(k, v) {
-		var productDisplay = v['display'];
-		var priceDisplay = numberThousand(v['price'], 0);
-
-		productString += `
-			<div class="col-md-3 col-12 mt-md-0 mt-4">
-				<div class="dashboardProductDisplay">
-					<div class="dashboardPRoductTopTitle${i}">
-						${v['display']}
-					</div>
-					<div class="dashboardProductContent mt-3">
-						<ul>
-						
-		`;
-
-		$.each(v['featureList'], function(k, v) {
-			productString += `	<li class="${v['has'] == 1 ? 'fa fa-check tick' : 'cross'} mr"><span class="ml-3" style="color: #000;">` + v['value'] + `</span></li><br>`;
-		});
-
-		productString += `
-						</ul>
-						<div class="productLine mt-5"></div>
-						<div class="productPrice my-4 text-center">
-							${priceDisplay} U
-						</div>
-						<button onClick="submitBtn(${v['id']})" class="btn btn-primary" style="width:100%;border-radius:10px;"><?php echo $translations['M03715'][$language]; //Buy ?></button>					
-					</div>
-				</div>
-			</div>
-		`;
-		i++;
-	});
-	$('#productDisplay').html(productString);
-	if (isMobile) {
-		$('#productDisplay').css({'flex-direction': 'column'});
-		$('.productData').css({'margin-bottom': '20px'});
-	}
 }
  
 function redirectTransferCredits(credit) {

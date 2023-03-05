@@ -3,13 +3,13 @@
         <i class="fas fa-times"></i>
     </a>
 
-    <div class="row justify-content-end">  
+    <div class="row">  
         <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
                 <i class="fas fa-bell"></i>
             </a>
         </div>   -->    
-        <div class="headerMenuItem order-lg-last">
+        <div class="headerMenuItem logout_margin order-lg-last">
             <a href="javascript:;" class="btn menuBtn headerMenuDropdown">
                 <img class="" src="images/project/globe.png" alt="" width="20px">
                 <span><i class="fa fa-angle-down ml-2" style="color: black;"></i></span>
@@ -60,18 +60,24 @@
         </div>
 
         <div class="headerMenuItem">
-            <a href="courseVideo" class="btn menuBtn" data-lang="M00025">
-		<?php echo $translations['M03702'][$language]; //Course Video ?>
+            <a href="javascript:;" class="btn menuBtn" data-lang="M00415">
+		<?php echo $translations['M00415'][$language]; //My wallet ?>
             </a>
         </div>
 
         <div class="headerMenuItem">
-            <a href="portfolio" class="btn menuBtn" data-lang="M00025">
-                <?php echo $translations['M00007'][$language]; //Portfolio ?>
+            <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
+                PURCHASE PACKAGE
             </a>
         </div>
 
         <div class="headerMenuItem">
+            <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
+                <?php echo $translations['M00589'][$language]; //Setting ?>
+            </a>
+        </div>
+
+        <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn headerMenuDropdown">
                 <?php echo $translations['M03741'][$language]; /* Bonus Report */ ?>
                 <i class="fa fa-angle-down ml-1"></i>
@@ -93,11 +99,11 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="headerMenuItem">
             <a href="editProfile" class="btn menuBtn" data-lang="M00025">
-		<?php echo $translations['M00465'][$language]; //My Profile ?>
+                <?php echo $translations['M00465'][$language]; //My Profile ?>
             </a>
         </div>
 
@@ -129,5 +135,6 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </div>

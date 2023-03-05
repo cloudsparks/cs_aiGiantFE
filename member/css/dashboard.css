@@ -642,6 +642,197 @@ img {vertical-align: middle;}
   margin-left: 25%;
 }
 
+.dashboard_user_display {
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  height: 240px;
+}
+
+.dashboard_text01 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+
+.dashboard_text02 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #276FD4;
+}
+
+.dashboard_text03 {
+  font-weight: 300;
+  font-size: 12px;
+  color: #516074;
+}
+
+.dashboard_text04 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+
+.seperateLine {
+  width: 10%;
+  background-color: #E8E8E8;
+  height: 1px;
+  margin: auto;
+}
+
+.seperateLine2 {
+  width: 100%;
+  background-color: #E8E8E8;
+  height: 1px;
+}
+
+.seperateLine3 {
+  border-right: 1px solid #E8E8E8;
+}
+
+.walletTitle1{
+  padding: 10px;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  background-color: #C33A3A;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+}
+
+.walletBoxDisplay1{
+  padding: 20px;
+  background-color: #F44849;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 230px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.walletBox_balance1 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+
+.walletBox_credit1 {
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+}
+
+.wallet_viewmore1 {
+  padding: 10px;
+  border: 1px solid #fff;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.walletBorder1 {
+  padding: 5px 0;
+  background-color: #EB585C;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.walletTitle2{
+  padding: 10px;
+  font-weight: 300;
+  font-size: 12px;
+  color: #FCC25A;
+  background-color: #FFF2DA;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+}
+
+.walletBoxDisplay2{
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 230px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.walletBox_balance2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000;
+}
+
+.walletBox_credit2 {
+  font-weight: 300;
+  font-size: 14px;
+  color: #516074;
+}
+
+.wallet_viewmore2 {
+  padding: 10px;
+  border: 1px solid #E8E8E8;
+  font-weight: 300;
+  font-size: 12px;
+  color: #000;
+  border-radius: 25px;
+}
+
+.walletBorder2 {
+  padding: 5px 0;
+  background-color: #FCC25A;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.portfolioDisplay {
+  padding: 15px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.dashboard_text05 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+.portfolioViewMore {
+  padding: 5px 10px;
+  border: 1px solid #E8E8E8;
+  font-weight: 300;
+  font-size: 12px;
+  color: #000;
+  border-radius: 25px;
+  float: right;
+}
+
+.newsDisplay {
+  padding: 15px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.newsImage {
+  width: 100%;
+}
+
+.newsContent01 {
+  margin: auto;
+}
+
+.news_text01 {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+}
+
+.news_text02 {
+  font-weight: 300;
+  font-size: 10px;
+  color: #000;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
 
   .modalWidth {
