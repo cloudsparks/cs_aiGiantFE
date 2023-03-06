@@ -404,8 +404,10 @@ img {vertical-align: middle;}
 .dashboardProductDisplay {
   /* padding: 40px 20px; */
   background: #fff;
-  border-radius: 25px;
-  box-shadow: 0 0 50px #ccc;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 100%;
 }
 
 .dashboardPRoductTopTitle1 {
@@ -447,7 +449,7 @@ img {vertical-align: middle;}
 .dashboardProductContent {
   color: #000;
   font-size: 17px;
-  padding:20px;
+  padding: 20px 0;
 }
 
 .dashboardTitle1 {
@@ -484,8 +486,9 @@ img {vertical-align: middle;}
   background-color: #fff;
 }
 
-#productDisplay {
-  padding: 0 3px;
+.productDisplay {
+  display: flex;
+  column-gap: 30px;
 }
 
 .productFont04 {
@@ -525,7 +528,7 @@ img {vertical-align: middle;}
 .tick {
   font-size: 15px;
   font-weight: 300;
-  color: #378D00;
+  color: #444A58;
 }
 
 .cross {
@@ -535,16 +538,16 @@ img {vertical-align: middle;}
 }
 
 .productLine {
-  width: 50%;
+  width: 100%;
   background-color: #BCBCBC;
   height: 1px;
   margin: auto;
 }
 
 .productPrice {
-  font-weight: 600;
-  font-size: 30px;
-  color: #146DEF;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
 }
 
 .settingFont01 {
@@ -831,6 +834,44 @@ img {vertical-align: middle;}
   font-weight: 300;
   font-size: 10px;
   color: #000;
+}
+
+.productTitle {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+}
+
+.purchaseBtn1 {
+  background-color: #7A4E00!important;
+}
+
+.purchaseBtn2 {
+  background-color: #9F9F9F!important;
+}
+
+.purchaseBtn3 {
+  background-color: #FCC25A!important;
+}
+
+.purchaseBtn4 {
+  background-color: #F44849!important;
+}
+
+.purchaseBtn5 {
+  background-color: #61B6F0!important;
+}
+
+.productBorder {
+  padding: 5px 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.productDisplayBox {
+  padding: 15px 30px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

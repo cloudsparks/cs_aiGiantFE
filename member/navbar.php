@@ -33,7 +33,7 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                 <div class="row align-items-center">
 
                     <div class="col-md-4 col-7">
-                        <img src="images/logo/logo.png" class="customLogo">
+                        <img src="images/logo/logo2.png" class="customLogo">
                     </div>
 
                     <div class="col-md-8 col-6">

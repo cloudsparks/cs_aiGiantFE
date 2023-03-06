@@ -66,7 +66,7 @@
         </div>
 
         <div class="headerMenuItem">
-            <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
+            <a href="purchasePackage" class="btn menuBtn" data-lang="M00025">
                 PURCHASE PACKAGE
             </a>
         </div>
