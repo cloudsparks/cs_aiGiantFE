@@ -278,7 +278,7 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
         $('#checkTPassword').val(checkTPassword);
         // $('#dateOfBirth').val(dateOfBirth);
         $('#sponsorUsername').val(sponsorName);
-        $('#otpCode').val(otpCode);
+        //$('#otpCode').val(otpCode);
         if (referralUsername) {
             $('#sponsorUsername').val(referralUsername)
             $('#sponsorUsername').attr('disabled', 'true');
