@@ -245,7 +245,7 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
                     </div>
                     <div class="col-12 col-md-6 loginPage2">
                         <a href="login" class="logoClick">
-                            <img src="images/logo/logo2.png" class="customLogo">        
+                            <img src="images/logo/logo2.jpeg" class="customLogo">        
                         </a>
                         <div class="loginCenterText">
                             <div class="loginFont01">

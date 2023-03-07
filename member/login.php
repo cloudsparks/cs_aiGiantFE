@@ -45,7 +45,7 @@
                         <div class="loginForm">
                             <div class="col-12 px-0">
                                 <a href="/login">
-                                    <img src="images/logo/logo2.png" class="loginLogo">
+                                    <img src="images/logo/logo2.jpeg" class="loginLogo">
                                 </a>
                                 <div class="loginMask">
                                     <div class="row">

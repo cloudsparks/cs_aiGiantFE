@@ -88,7 +88,7 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
                                 <div class="registrationForm">
                                     <div class="logoWrapper mb-3">
                                         <a href="/login.php">
-                                            <img src="images/logo/logo2.png" alt="" class="loginLogo">
+                                            <img src="images/logo/logo2.jpeg" alt="" class="loginLogo">
                                         </a>
                                     </div>
                                     <div class="col-12 regMask">
