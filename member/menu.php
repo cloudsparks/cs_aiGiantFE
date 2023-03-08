@@ -85,7 +85,7 @@
             <div class="headerMenuDropdownBox">
                 <div class="headerMenuDropdownItem">
                     <a href="rebateBonus" class="btn menuDropdownBtn">
-                        <?php echo $translations['M01147'][$language]; /* Dividen */ ?> <?php echo $translations['M00961'][$language]; /* Report */ ?>
+                        ROI Bonus Report                    
                     </a>
                 </div>
                 <div class="headerMenuDropdownItem">

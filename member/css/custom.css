@@ -896,7 +896,15 @@ a.dbLink:hover {
 }
 
 /* form */
+
 .listingWrapper {
+    padding: 30px;
+    background-color: #fff;
+    border-top-right-radius:7px;
+    border-bottom-right-radius:7px;
+}
+
+.listingWrapperFilter {
     padding: 30px;
     background-color: #F2F7FF;
     border-radius: 7px;
@@ -916,12 +924,9 @@ a.dbLink:hover {
 .pageTitle {
     text-transform: uppercase;
     display: inline-block;
-    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
     color: #000;
-    font-size: 20px;
-    /* line-height: 15px; */
-    font-weight: 500;
-    padding: 10px 15px;
 }
 
 .input-daterange input {
@@ -2630,8 +2635,9 @@ background: unset;
   }
 
 .bgContainer {
-    background: url('/../images/profileBG.png');
-    background-size: cover; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .bgContainer2 {

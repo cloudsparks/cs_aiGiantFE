@@ -4,88 +4,104 @@
 
 <section class="pageContent">
     <div class="kt-container">
-        <div class="text-center">
-            <div class="pageTitle">
-                 <span data-lang="M03736"><?php echo $translations['M03736'][$language]; //Wallet Withdrawal ?></span>
+        <div class="col-12 px-5">
+            <div>
+                <img src="/images/withdrawalBg.png" class="w-100">
             </div>
-        </div>
-        <div class="bgContainer p-5">
-            <div class="col-12">
-                <div class="row justify-content-center">
-                    <div class="col-md-5 col-12 summaryDisplay">
-                        <div class="displayContainer mt-2">
-                            <div class="pageTitle" style="text-decoration: underline;">
-                                <?php echo $translations['M03735'][$language]; //Summary ?>
-                            </div>
-                            <div class="withdrawalFont01">
-                                 <?php echo $translations['M00110'][$language]; //Withdrawal Amount ?>:
-                                 <div id="amountDisplay" style="float: right;">
-                                     
-                                 </div>
-                            </div>
-                            <div class="withdrawalFont01 mt-3">
-                                 <?php echo $translations['M01033'][$language]; //Admin Fee ?>:
-                                 <div id="adminFee" style="float: right;">
-                                     
-                                 </div>
-                            </div>
-                            <div class="withdrawalFont01 mt-3">
-                                 <?php echo $translations['M01144'][$language]; //NET Withdrawal Amount ?>:
-                                 <div id="receiveAmount" style="float: right;">
-                                     
-                                 </div>
-                            </div>
-                        </div>
+            <div class="bgContainer">                
+                <div class="col-12">
+                    <div class="pageTitle">
+                         <span data-lang="M03736"><?php echo $translations['M03736'][$language]; //Wallet Withdrawal ?></span>
                     </div>
-                    <div class="col-md-7 col-12 px-5">
-                        <div class="balanceContainer">
-                            <div class="withdrawalFont02">
-                                <?php echo $translations['M03737'][$language]; //Wallet Balance ?>: 
-                                <span id="balance" style="float: right;"></span>
+                    <div class="row">
+                        <!-- <div class="col-md-5 col-12 summaryDisplay">
+                            <div class="displayContainer mt-2">
+                                <div class="pageTitle" style="text-decoration: underline;">
+                                    <?php echo $translations['M03735'][$language]; //Summary ?>
+                                </div>
+                                <div class="withdrawalFont01">
+                                     <?php echo $translations['M00110'][$language]; //Withdrawal Amount ?>:
+                                     <div id="amountDisplay" style="float: right;">
+                                         
+                                     </div>
+                                </div>
+                                <div class="withdrawalFont01 mt-3">
+                                     <?php echo $translations['M01033'][$language]; //Admin Fee ?>:
+                                     <div id="adminFee" style="float: right;">
+                                         
+                                     </div>
+                                </div>
+                                <div class="withdrawalFont01 mt-3">
+                                     <?php echo $translations['M01144'][$language]; //NET Withdrawal Amount ?>:
+                                     <div id="receiveAmount" style="float: right;">
+                                         
+                                     </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group mt-4">
-                            <label data-lang="M00110" class="d-flex justify-content-between" style="color: #fff;">
-                                <?php echo $translations['M00278'][$language]; //Crypto Type ?>
-                            </label>
-                            <select id="cryptoType" class="form-control inputDesign">
-                               <option value=""><?php echo $translations['M00436'][$language]; ?></option>
-                               <option value="TRC20">TRC20</option>
-                               <option value="BEP20">BEP20</option>
-                           </select>
-                        </div>
-                        <div class="form-group mt-4">
-                            <label data-lang="M00110" class="d-flex justify-content-between" style="color: #fff;">
-                                <?php echo $translations['M02105'][$language]; //Wallet Address ?>
-                            </label>
-                            
-                            <input id="walletAddress" class="form-control inputDesign" type="text">
-                        </div>
-                        <div class="form-group mt-4">
-                            <label data-lang="M00110" class="d-flex justify-content-between" style="color: #fff;">
-                                <?php echo $translations['M00110'][$language]; //Withdrawal Amount ?>
-                            </label>
-                            
-                            <input id="amount" class="form-control inputDesign" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '');calcAmt();">
-                        </div>
-                        <div class="form-group">
-                            <label data-lang="M00042" style="color: #fff;"><?php echo $translations['M00042'][$language]; //Transaction Password ?></label>
-                            <div class="row align-items-center">
-                                 <div class="col-12">
-                                    <div class="position-relative">
-                                        <input id="transactionPassword" class="form-control inputDesign" type="password">
-                                <!-- <i class="far fa-eye eyeIcon"></i> -->
+                        </div> -->
+                        <div class="col-md-6 col-12 px-5">
+                            <div class="form-group mt-4">
+                                <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
+                                    <?php echo $translations['M00278'][$language]; //Crypto Type ?>
+                                </label>
+                                <select id="cryptoType" class="form-control inputDesign">
+                                   <option value=""><?php echo $translations['M00436'][$language]; ?></option>
+                                   <option value="TRC20">TRC20</option>
+                                   <option value="BEP20">BEP20</option>
+                               </select>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
+                                    <?php echo $translations['M02105'][$language]; //Wallet Address ?>
+                                </label>
+                                
+                                <input id="walletAddress" class="form-control inputDesign" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label data-lang="M00042" style="color: #000;"><?php echo $translations['M00042'][$language]; //Transaction Password ?></label>
+                                <div class="row align-items-center">
+                                     <div class="col-12">
+                                        <div class="position-relative">
+                                            <input id="transactionPassword" class="form-control inputDesign" type="password">
+                                    <!-- <i class="far fa-eye eyeIcon"></i> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="balanceContainer">
+                                <div class="withdrawalFont02" style="float: right;">
+                                    <?php echo $translations['M01033'][$language]; //Admin Fee ?>: 
+                                    <span id="adminFeePercentage"></span>
+                                </div>
+                                <div class="withdrawalFont02">
+                                    <?php echo $translations['M03583'][$language]; //Available Amount ?>: 
+                                    <span id="balance"></span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12 mt-4">
-                        <div class="d-flex">
-                            <button onclick="goBack();" type="button" class="btn btn-default w-100 py-3 mr-3" data-lang="M00163"><?php echo $translations['M00163'][$language]; /* Back */?></button>
-                            <button id="nextBtn" type="button" class="btn btn-primary w-100 py-3" data-lang="M00034">
-                                <?php echo $translations['M00034'][$language]; //Next ?>
-                            </button>
+                        <div class="col-md-6 col-12 px-5">
+                            <div class="form-group mt-4">
+                                <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
+                                    <?php echo $translations['M00110'][$language]; //Withdrawal Amount ?>
+                                </label>
+                                
+                                <input id="amount" class="form-control inputDesign" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '');calcAmt();">
+                            </div>
+                            <div class="form-group mt-4">
+                                <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
+                                    <?php echo $translations['M02100'][$language]; //Receivable Amount ?>
+                                </label>
+                                
+                                <input id="receiveAmount" class="form-control inputDesign" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-4">
+                            <div class="d-flex">
+                                <button onclick="goBack();" type="button" class="btn btn-default w-100 py-3 mr-3" data-lang="M00163"><?php echo $translations['M00163'][$language]; /* Back */?></button>
+                                <button id="nextBtn" type="button" class="btn btn-primary w-100 py-3" data-lang="M00034">
+                                    <?php echo $translations['M00034'][$language]; //Next ?>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -401,7 +417,7 @@ function loadWithdrawalData(data, message) {
 	$('#walletName').text(withdrawalData.creditTypeDisplay);
 	$('#balance').text(numberThousand(balance,2));
 	// $('#unitRate').val(numberThousand(unitRate, 2));
-    $('#adminFeePercentage').text(addCommas(adminFeePerc));
+    $('#adminFeePercentage').text(addCommas(adminFeePerc + "%"));
 
 	if(withdrawalType) {
 	    $.each(withdrawalType, function(k, v) {
@@ -609,7 +625,7 @@ function calcAmt(){
     }
 
 	$('#convertedAmt').val(numberThousand(convertedAmt, 2));
-	$('#receiveAmount').text(numberThousand(receiveAmt, 2));
+	$('#receiveAmount').val(numberThousand(receiveAmt, 2));
     $('#adminFee').text(numberThousand(adminFeeCalc, 2));
     $('#exchangeAmt').val(numberThousand(exchangeAmt, 2));
     $('#amountDisplay').text(numberThousand(amount, 2));

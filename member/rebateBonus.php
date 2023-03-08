@@ -31,7 +31,7 @@ $stopRecord = $_SESSION["stopRecord"];
 							ROI Bonus Report
 						</div>
 					</div>
-					<div id="listingWrapper" class="listingWrapper">
+					<div id="listingWrapper" class="listingWrapperFilter">
 					    <div class="col-12">
 					    	<form id="searchDIV">
 					    		<div class="col-12 px-0">
@@ -143,9 +143,9 @@ $(document).ready(function(){
 
     $('body').click(function(evt){    
        if((evt.target.id == "viewMoreBtn") || (evt.target.id == "listingWrapper") || (evt.target.id == "datepicker") || (evt.target.id == "searchBtn") || (evt.target.id == "resetBtn") || (evt.target.id == "dateRangeStart") || (evt.target.id == "dateRangeEnd")) {
-       	$('.listingWrapper').show();
+       	$('.listingWrapperFilter').show();
        } else {
-       	$('.listingWrapper').hide();
+       	$('.listingWrapperFilter').hide();
        }
 	});
 	    
