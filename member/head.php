@@ -99,7 +99,7 @@ $languages = $sys['languages'];
 	<!--end::Layout Skins -->
 
 	<!-- <link rel="shortcut icon" href="<?php echo $config['favicon']; ?>" /> -->
-	<link rel="shortcut icon" href="images/logo/favicon.ico" />
+	<link rel="shortcut icon" href="images/logo/favicon2.ico" />
 
 </head>
 <!-- end::Head -->

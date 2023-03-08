@@ -14,66 +14,29 @@ $stopRecord = $_SESSION["stopRecord"];
 	    overflow-x: hidden;
 	    background-color: #F5F5F5;
 	}
-
-	.footerPosition {
-		position: unset;
-	}
 </style>
 
 <link href="css/dashboard.css?v=<?php echo filemtime('css/dashboard.css'); ?>" rel="stylesheet" type="text/css" />
-
-<!-- <div class ="navBar">
-<div class="dropdown">
-    <button class="dropbtn">Dropdown 
-	<img class="" src="./images/588a6507d06f6719692a2d15.png" width="25px">   
-    </button>
-	<div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div> 
-</div> -->
-
-<!-- <div class="dropdown">
-  <button class="dropbtn"><img class="" src="./images/588a6507d06f6719692a2d15.png" width="25px">   </button>
-  <div class="dropdown-content">
-    <a href="#">Homepage</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-  </div>
-</div> -->
-
-<!-- Slideshow start -->
-<!-- <div class="slideshow-container" style="padding-top:25px;">
-	<div><?php include 'yinYangSymbol.php' ?></div>
-	<div class="mySlides fade">
-	<img src="images/1.jpeg" style="width:100%; max-height: 600px; background-size:cover;border-radius: 0px 0px 15px 15px">
-	</div>
-	<div class="mySlides fade">
-	<img src="images/2.jpeg" style="width:100%; max-height: 600px; background-size:cover;border-radius: 0px 0px 15px 15px">
-	</div>
-	<div class="mySlides fade">
-	<img src="images/3.jpeg" style="width:100%; max-height: 600px; background-size:cover;border-radius: 0px 0px 15px 15px">
-	</div>
-</div> -->
 <div class="kt-container">
-	<div class="listingPageWrapper">
-		<div class="text-center mt-5">
-			<div class="pageTitle py-0">
-				<span data-lang="M03707"><?php echo $translations['M03707'][$language] /*Leadership Bonus*/ ?></span>
-			</div>
-		</div>
+	<div class="col-12 px-5">
+		 <div class="portfolioDisplay">
 
-		<div class="col-12">
-			<div class="row justify-content-center">
-				<div class="col-md-12">
-
-					<div class="listingWrapper">
+			<div class="col-12">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<a id="viewMoreBtn" href="javascript:;" class="portfolioViewMore">
+							View More
+						</a>
+						<div class="dashboard_text05">
+							ROI Bonus Report
+						</div>
+					</div>
+					<div id="listingWrapper" class="listingWrapper">
 					    <div class="col-12">
 					    	<form id="searchDIV">
 					    		<div class="col-12 px-0">
 							        <div class="row align-items-end">
-							        	<div class="col-lg-4 col-md-6 col-12 form-group" id="datepicker">
+							        	<div class="col-md-12 col-12 form-group" id="datepicker">
 							        	    <label><?php echo $translations['M00091'][$language] /*Date Range*/ ?></label>
 							        	    <div class="input-daterange input-group" id="datepicker-range">
 							        	    	<input id="dateRangeStart" type="text" class="input-sm form-control" name="start" dataType="dateRange" dataName="bonusDate" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
@@ -82,10 +45,10 @@ $stopRecord = $_SESSION["stopRecord"];
 							        	    	<label for="dateRangeStart" class="input-group-text"></label>
 							        	    </div>
 							        	</div>
-							        	<div class="col mt-3">
+							        	<div class="col-12 mt-3">
 							        		<button id="searchBtn" class="btn btn-primary mr-3" type="button" name="button"><?php echo $translations['M00243'][$language] /*Search*/ ?></button>
 							        		<button id="resetBtn" class="btn btn-default" type="button" name="button"><?php echo $translations['M00085'][$language] /*Reset*/ ?></button>
-							        		<!-- <span> <i class="fa fa-repeat ml-3" style="color:#696969; font-size: 20px;  transform: rotate(-40deg); vertical-align: text-top; cursor: pointer;" id="resetBtn"></i> </span> -->
+							        		
 							        	</div>
 							        </div>
 					    		</div>
@@ -93,28 +56,29 @@ $stopRecord = $_SESSION["stopRecord"];
 					    	</form>
 					    </div>
 					</div>
+					<div class="col-12 px-0 pt-4">
+					    <form>
+					        <div id="basicwizard" class="pull-in col-12 px-0">
+					            <div class="tab-content b-0 m-b-0 p-t-0">
+					                <div id="alertMsg" class="text-center" style="display: block;"></div>
+					                <div id="listingDiv" class="table-responsive"></div>
+					                <span id="paginateText"></span>
+					                <div class="text-center">
+					                    <ul class="pagination pagination-md" id="pagerList"></ul>
+					                </div>
+					            </div>
+					        </div>
+					    </form>
+					</div>
+						
+						
+					
 				</div>
-						<div class="col-12 px-0 mt-4 pt-4">
-						    <form>
-						        <div id="basicwizard" class="pull-in col-12 px-0">
-						            <div class="tab-content b-0 m-b-0 p-t-0">
-						                <div id="alertMsg" class="text-center" style="display: block;"></div>
-						                <div id="listingDiv" class="table-responsive"></div>
-						                <span id="paginateText"></span>
-						                <div class="text-center">
-						                    <ul class="pagination pagination-md" id="pagerList"></ul>
-						                </div>
-						            </div>
-						        </div>
-						    </form>
-						</div>
-					
-					
-				
 			</div>
 		</div>
 	</div>
-	</div>
+		
+</div>
 <?php include 'footer.php'; ?>
 </body>
 
@@ -150,6 +114,8 @@ var thArray  = Array(
 		// "<?php echo $translations['M01027'][$language]; ?>", //Unit Price
 );
 
+var clickTrigger = 0;
+
 $(document).ready(function(){
 
 	$("body").keyup(function(event) {
@@ -174,6 +140,15 @@ $(document).ready(function(){
         $("#dateRangeStart").val(start.format('DD/MM/YYYY'));
         $("#dateRangeEnd").val(end.format('DD/MM/YYYY'));
     });
+
+    $('body').click(function(evt){    
+       if((evt.target.id == "viewMoreBtn") || (evt.target.id == "listingWrapper") || (evt.target.id == "datepicker") || (evt.target.id == "searchBtn") || (evt.target.id == "resetBtn") || (evt.target.id == "dateRangeStart") || (evt.target.id == "dateRangeEnd")) {
+       	$('.listingWrapper').show();
+       } else {
+       	$('.listingWrapper').hide();
+       }
+	});
+	    
 
     $('#dateRangeEnd').click(function() {
         $('#dateRangeStart').trigger('click');

@@ -9,65 +9,70 @@
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
 
-<section class="pageContent">
-	<div class="kt-container">
+<link href="css/dashboard.css?v=<?php echo filemtime('css/dashboard.css'); ?>" rel="stylesheet" type="text/css" />
 
-		<div class="text-center">
-			<div class="pageTitle">
-				<span data-lang="M00985"><?php echo $translations['M00985'][$language] /*Leadership Bonus*/ ?></span>
-			</div>
-		</div>
+<div class="kt-container">
+	<div class="col-12 px-5">
+		 <div class="portfolioDisplay">
 
-		<div class="col-12">
-			<div class="row justify-content-center">
-				<div class="col-md-11 col-lg-10">
-
-					<div class="listingWrapper">
+			<div class="col-12">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<a id="viewMoreBtn" href="javascript:;" class="portfolioViewMore">
+							View More
+						</a>
+						<div class="dashboard_text05">
+							Leadership Report
+						</div>
+					</div>
+					<div id="listingWrapper" class="listingWrapper">
 					    <div class="col-12">
 					    	<form id="searchDIV">
 					    		<div class="col-12 px-0">
 							        <div class="row align-items-end">
-							        	<div class="col-lg-3 col-md-6 col-12 form-group" id="datepicker">
+							        	<div class="col-md-12 col-12 form-group" id="datepicker">
 							        	    <label><?php echo $translations['M00091'][$language] /*Date Range*/ ?></label>
 							        	    <div class="input-daterange input-group" id="datepicker-range">
 							        	    	<input id="dateRangeStart" type="text" class="input-sm form-control" name="start" dataType="dateRange" dataName="bonusDate" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 							        	    	<span class="input-group-text">-</span>
 							        	        <input id="dateRangeEnd" type="text" class="form-control" name="end" dataType="dateRange" autocomplete="off" dataName="bonusDate" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-							        	    	<label for="dateRangeStart" class="input-group-text"><i class="fa fa-calendar"></i></label>
+							        	    	<label for="dateRangeStart" class="input-group-text"></label>
 							        	    </div>
 							        	</div>
-
-							        	<div class="col mt-3">
-							        		<button id="searchBtn" class="btn btn-primary" type="button" name="button"><?php echo $translations['M00243'][$language] /*Search*/ ?></button>
+							        	<div class="col-12 mt-3">
+							        		<button id="searchBtn" class="btn btn-primary mr-3" type="button" name="button"><?php echo $translations['M00243'][$language] /*Search*/ ?></button>
 							        		<button id="resetBtn" class="btn btn-default" type="button" name="button"><?php echo $translations['M00085'][$language] /*Reset*/ ?></button>
-							        		<!-- <span> <i class="fa fa-repeat ml-3" style="color:#696969; font-size: 20px;  transform: rotate(-40deg); vertical-align: text-top; cursor: pointer;" id="resetBtn"></i> </span> -->
+							        		
 							        	</div>
 							        </div>
 					    		</div>
 
 					    	</form>
 					    </div>
-						<div class="col-12 mt-4 pt-4">
-						    <form>
-						        <div id="basicwizard" class="pull-in col-12 px-0">
-						            <div class="tab-content b-0 m-b-0 p-t-0">
-						                <div id="alertMsg" class="text-center" style="display: block;"></div>
-						                <div id="listingDiv" class="table-responsive"></div>
-						                <span id="paginateText"></span>
-						                <div class="text-center">
-						                    <ul class="pagination pagination-md" id="pagerList"></ul>
-						                </div>
-						            </div>
-						        </div>
-						    </form>
-						</div>
 					</div>
+					<div class="col-12 px-0 pt-4">
+					    <form>
+					        <div id="basicwizard" class="pull-in col-12 px-0">
+					            <div class="tab-content b-0 m-b-0 p-t-0">
+					                <div id="alertMsg" class="text-center" style="display: block;"></div>
+					                <div id="listingDiv" class="table-responsive"></div>
+					                <span id="paginateText"></span>
+					                <div class="text-center">
+					                    <ul class="pagination pagination-md" id="pagerList"></ul>
+					                </div>
+					            </div>
+					        </div>
+					    </form>
+					</div>
+						
+						
 					
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
+		
+</div>
 
 <?php include 'footer.php'; ?>
 </body>
@@ -95,12 +100,11 @@ var btnArray = {};
 
 var thArray  = Array(
 		"<?php echo $translations['M00113'][$language]; ?>", //Date
-		"<?php echo $translations['M00052'][$language]; ?>", //From Username
-		"<?php echo $translations['M00053'][$language]; ?>", //From Amount
-		// "<?php echo $translations['M01027'][$language]; ?>", //Unit Price
-		"<?php echo $translations['M00049'][$language]; ?>", //Percentage
-		"<?php echo $translations['M00986'][$language]; ?>", //Pay Percentage
-		"<?php echo $translations['M00054'][$language]; ?>" //Payable amount
+		"<?php echo $translations['M00651'][$language]; ?>", //Rank
+		"Group ROI",
+		"Calculate %",
+		"Paid %",
+		"<?php echo $translations['M00985'][$language]; ?>", //Leadership Bonus
 );
 
 $(document).ready(function(){
@@ -116,6 +120,14 @@ $(document).ready(function(){
 	};
 	var fCallback = loadDefaultListing;
 	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
+
+	$('body').click(function(evt){    
+       if((evt.target.id == "viewMoreBtn") || (evt.target.id == "listingWrapper") || (evt.target.id == "datepicker") || (evt.target.id == "searchBtn") || (evt.target.id == "resetBtn") || (evt.target.id == "dateRangeStart") || (evt.target.id == "dateRangeEnd")) {
+       	$('.listingWrapper').show();
+       } else {
+       	$('.listingWrapper').hide();
+       }
+	});
 
 	$('#dateRangeStart').daterangepicker({    
         autoApply: true,
@@ -195,9 +207,8 @@ function loadDefaultListing(data, message) {
 		$.each(list, function(k,v){
 			var rebuildData ={
 				bonusDate: v['bonusDate'],
-				fromUsername: v['fromUsername'],
+				rankDisplay: v['rankDisplay'],
 				fromAmount: numberThousand(v['fromAmount'], 2),
-				// unitPrice: numberThousand(v['unitPrice'], 2),
 				percentage: numberThousand(v['percentage'], 2),
 				payPercentage: numberThousand(v['payPercentage'], 2),
 				payableAmount: numberThousand(v['payableAmount'], 2),

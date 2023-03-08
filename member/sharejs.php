@@ -315,11 +315,11 @@
       $('#campaignDividendReport').hide()
     }
 
-    if(data.rankDetails && data.rankDetails.rankDisplay){
-      var rankDisplayCode = data.rankDetails.rankDisplay;
-      var rankDisplay = translations[rankDisplayCode][language];
-      $('#sidebarRankDisplay').text(rankDisplay);
-    }
+    // if(data.rankDetails && data.rankDetails.rankDisplay){
+    //   var rankDisplayCode = data.rankDetails.rankDisplay;
+    //   var rankDisplay = translations[rankDisplayCode][language];
+    //   $('#sidebarRankDisplay').text(rankDisplay);
+    // }
     
     // if (data.memberKycStatus == "New") {
     //   $('#noticeKYC').show();

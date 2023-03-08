@@ -1,5 +1,6 @@
 .kt-container {
     padding: 0;
+    min-height: 75%;
 }
 
 .homepageHeader {

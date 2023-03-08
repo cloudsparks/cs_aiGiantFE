@@ -1,24 +1,13 @@
-<?php
-include 'include/config.php';
-include 'head.php';
-include 'header.php';
+<?php 
+    session_start();
 
-
-$currentTime = microtime(true) * 1000;
-$stopRecord = $_SESSION["stopRecord"];
+    if (in_array("Bonus Report", $_SESSION['blockedRights'])){
+     header("Location: dashboard.php");
+    } 
 ?>
-
-<style>
-	body{
-	    width: 100%;
-	    overflow-x: hidden;
-	    background-color: #F5F5F5;
-	}
-
-	.footerPosition {
-		position: unset;
-	}
-</style>
+<?php include 'include/config.php'; ?>
+<?php include 'head.php'; ?>
+<?php include 'header.php'; ?>
 
 <link href="css/dashboard.css?v=<?php echo filemtime('css/dashboard.css'); ?>" rel="stylesheet" type="text/css" />
 
@@ -33,7 +22,7 @@ $stopRecord = $_SESSION["stopRecord"];
 							View More
 						</a>
 						<div class="dashboard_text05">
-							ROI Tier Bonus Report
+							Sponsor Bonus Report
 						</div>
 					</div>
 					<div id="listingWrapper" class="listingWrapper">
@@ -84,12 +73,14 @@ $stopRecord = $_SESSION["stopRecord"];
 	</div>
 		
 </div>
-<?php include 'footer.php'; ?>
 
-<?php
-include 'sharejs.php';
-$_SESSION["stopRecord"] = 1;
-?>
+<?php include 'footer.php'; ?>
+</body>
+
+<?php include 'backToTop.php' ?>
+<?php include 'sharejs.php'; ?>
+
+</body>
 </html>
 
 <script>
@@ -108,12 +99,11 @@ var pagerId  = 'pagerList';
 var btnArray = {};
 
 var thArray  = Array(
-		"<?php echo $translations['A00969'][$language]; /* Bonus Date */ ?>",
+		"<?php echo $translations['M00113'][$language]; ?>", //Date
 		'<?php echo $translations['M03424'][$language]; /* From Username */ ?>',
-		'<?php echo $translations['M02594'][$language]; /* From Level */ ?>',
-		'From ROI',
-		"<?php echo $translations['M03031'][$language]; /* Percentage */ ?>",
-		'Tier Bonus'
+		'<?php echo $translations['M01635'][$language]; /* From Amount */ ?>',
+		"Bonus %",
+		'<?php echo $translations['M01148'][$language]; /* Bonus Amount */ ?>',
 );
 
 $(document).ready(function(){
@@ -125,7 +115,7 @@ $(document).ready(function(){
 	});
 	
 	var formData  = {
-	  command: 'getCommunityBonusReport'
+	  command: 'getSponsorBonusReport'
 	};
 	var fCallback = loadDefaultListing;
 	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
@@ -190,7 +180,7 @@ function pagingCallBack(pageNumber, fCallback){
     var searchId = 'searchDIV';
     var searchData = buildSearchDataByType(searchId);
     var formData = {
-        command             : "getCommunityBonusReport",
+        command             : "getSponsorBonusReport",
         pageNumber          : pageNumber,
         searchData          : searchData
     };
@@ -215,12 +205,11 @@ function loadDefaultListing(data, message) {
 		var newList = [];
 		$.each(list, function(k,v){
 			var rebuildData ={
-				bonus_date : v['bonus_date'],
-				fromUsername : v['fromUsername'],
-				level      : v['level'],
-				fromAmount : v['fromAmount'],
-				percentage : v['percentage'],
-				payableAmount : v['payableAmount'],
+				bonus_date: v['bonus_date'],
+				fromUsername: v['fromUsername'],
+				fromAmount: numberThousand(v['fromAmount'], 2),
+				percentage: numberThousand(v['percentage'], 2),
+				payableAmount: numberThousand(v['payableAmount'], 2),
 			};
 				newList.push(rebuildData);
 		});
@@ -229,12 +218,12 @@ function loadDefaultListing(data, message) {
 	buildTable(newList, tableId, divId, thArray, btnArray, message, tableNo);
 	pagination(pagerId, data.pageNumber, data.totalPage, data.totalRecord, data.numRecord);
 
-
 	$('#'+tableId).find('tr').each(function(){
+	    $(this).find('td:eq(2), th:eq(2)').css('text-align', "right");
 	    $(this).find('td:eq(3), th:eq(3)').css('text-align', "right");
 	    $(this).find('td:eq(4), th:eq(4)').css('text-align', "right");
 	    $(this).find('td:eq(5), th:eq(5)').css('text-align', "right");
-``	    // $(this).find('td:eq(3), th:eq(3)').css('text-align', "right");
+	    // $(this).find('td:eq(6), th:eq(6)').css('text-align', "right");
 	});
 
 	// START DataTables
@@ -272,7 +261,7 @@ function loadDefaultListing(data, message) {
 		if(grandTotal){
 			$('#' + tableId).find('tbody').append(`
 			    <tr style="">
-			        <td colspan='5' class="text-right"><?php echo $translations['A00651'][$language]; /* Grand Total */?>:</td>
+			        <td colspan='4' class="text-right"><?php echo $translations['A00651'][$language]; /* Grand Total */?>:</td>
 			        <td style="text-align: right;"> ${numberThousand(grandTotal, 2)} </td>
 			    </tr>
 			`);

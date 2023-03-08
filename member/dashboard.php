@@ -21,7 +21,7 @@ $stopRecord = $_SESSION["stopRecord"];
 
 <div class="kt-container">
 	<div class="row p-md-0 p-5">
-		<div class="col-12 mt-5">
+		<div class="col-12 mt-3 px-5">
 			<div id="walletSection" class="row justify-content-center">
 				<div class="col-md-3">
 					<div class="dashboard_user_display">

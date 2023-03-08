@@ -40,226 +40,180 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
 <body class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
     <section class="registrationPage">
-        
-        
-        <div class="kt-container loginWrap">
-            <div class="col-12">
-                <div class="row h-100">
-                    <div class="col-12 col-md-6" style="background-color: #F4F5F7;">
-                        <div class="registrationForm mt-5">
-                            <div class="col-12">
-                                <div class="loginFont03 mt-2 mb-3" style="margin-top: unset;">
-                                    Register New Account
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00001"><?php echo $translations['M00001'][$language]; //Username 
-                                                                                ?></label>
-                                            <input id="username" type="text" class="form-control" disabled placeholder="<?php echo $translations['M00241'][$language]; //Enter Your Username 
-                                                                                                                ?>">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00035"><?php echo $translations['M00035'][$language]; //Full Name 
-                                                                                ?></label>
-                                            <input id="fullName" type="text" class="form-control" disabled placeholder="<?php echo $translations['M00377'][$language]; //Enter Your Full Name 
-                                                                                                                ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00037"><?php echo $translations['M00037'][$language]; //Country 
-                                                                                ?></label>
-                                            <select id="country" class="form-control" disabled>
-                                                <option value=""><?php echo $translations['M00436'][$language]; ?></option>
-                                            </select>
-                                        </div>
-                                    </div>
-<!--
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00038"><?php echo $translations['M00038'][$language]; //Mobile Number 
-                                                                                ?></label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend col-md-4 col-4 pl-0">
-                                                    <input class="form-control" disabled id="phoneCode" placeholder="<?php echo $translations['M00388'][$language]; //Country Code 
-                                                                                                            ?>" disabled>
-                                                </div>
-                                                <input oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" type="text" class="form-control" disabled id="phone" placeholder="<?php echo $translations['M00380'][$language]; //Enter Your Mobile Mumber 
-                                                                                                                                                                                                        ?>">
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00039"><?php echo $translations['M00039'][$language]; //Email Address 
-                                                                                ?></label>
-                                            <input id="email" type="text" class="form-control" disabled placeholder="<?php echo $translations['M00201'][$language]; //Enter Your Email Address 
-                                                                                                            ?>">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00044"><?php echo $translations['M00044'][$language]; //Sponsor Username 
-                                                                                ?></label>
-                                            <input id="sponsorUsername" type="text" class="form-control" disabled placeholder="<?php echo $translations['M01167'][$language]; //Enter Your Referral Username 
-                                                                                                                        ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4 fromQR">
-                                    <div class="col-md-6 col-12 form-group" id="octopusUsernameField">
-                                        <label class="formLabel register"><i class="fas fa-user-friends mr-2"></i><?php echo $translations['A00198'][$language]; //Placement Username 
-                                                                                                                    ?></label>
-                                        <input type="text" class="form-control beforeLoginForm" disabled id="placementUsername" placeholder="<?php echo $translations['E00322'][$language]; //Please fill in placement username 
-                                                                                                                                    ?>">
-                                        <span id="octopusUsernameError" class="customError text-danger" error="error"></span>
-                                        <span id="leftrightpositionalreadyexists" class="customError text-danger" error="error"></span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="formLabel register"><i class="fas fa-user-friends mr-2"></i><?php echo $translations['A00199'][$language]; //Placement Position 
-                                                                                                                        ?></label>
-                                            <div class="form-group" style="margin-top: 15px; width: 50%;">
-                                                <div class="kt-radio-inline loginRadio row">
-                                                    <label for="leftCheckbox" class="col-md-6 col-12 otpCheckbox text-md-center text-sm-left mt_x">
-                                                        <label class="kt-radio bankRadio mt_x" data-lang="M02267">
-                                                            <input type="radio" name="placementPosition" value="1" id="leftCheckbox" checked disabled>
-                                                            <label class="formLabel beforeLogin boldTxt mt_x"><?php echo $translations['A00200'][$language]; //Left 
-                                                                                                                ?></label>
-                                                            <span></span>
-                                                        </label>
-                                                    </label>
-                                                    <label class="col-md-6 col-12 otpCheckbox text-md-center text-sm-left mt_x" for="rightCheckbox">
-                                                        <label class="kt-radio walletRadio mt_x" data-lang="M02105">
-                                                             <input type="radio" name="placementPosition" value="2" id="rightCheckbox" disabled>
-                                                            <label class="formLabel beforeLogin boldTxt mt_x"><?php echo $translations['A00201'][$language]; //Right 
-                                                                                                                ?></label>
-                                                            <span></span>
-                                                        </label>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00002"><?php echo $translations['M00002'][$language]; //Password 
-                                                                                ?></label>
-                                            <input id="password" type="password" class="form-control" disabled placeholder="<?php echo $translations['M00382'][$language]; //Enter Your Password 
-                                                                                                                    ?>">
-                                            <i class="far fa-eye eyeIcon3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00041"><?php echo $translations['M00041'][$language]; //Retype Password 
-                                                                                ?></label>
-                                            <input id="checkPassword" type="password" class="form-control" disabled placeholder="<?php echo $translations['M00383'][$language]; //Retype Your Password 
-                                                                                                                        ?>">
-                                            <i class="far fa-eye eyeIcon3"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00042"><?php echo $translations['M00042'][$language]; //Transaction Password 
-                                                                                ?></label>
-                                            <input id="tPassword" type="password" class="form-control" disabled placeholder="<?php echo $translations['M00384'][$language]; //Enter Your Transaction Password 
-                                                                                                                    ?>">
-                                            <i class="far fa-eye eyeIcon3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="" data-lang="M00043"><?php echo $translations['M00043'][$language]; //Retype Transaction Password 
-                                                                                ?></label>
-                                            <input id="checkTPassword" type="password" class="form-control" disabled placeholder="<?php echo $translations['M00385'][$language]; //Retype Your Transaction Password 
-                                                                                                                            ?>">
-                                            <i class="far fa-eye eyeIcon3"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                               <!--  <div class="row mb-4" id='a'>
-                                    <div class="col-md-6">
-                                        <div class="col-md-6 col-12 form-group" id="octopusUsernameField">
-                                            <div class="row">
-                                                <label class="formLabel register"><?php echo "OTP Code"; //OTP Code
-                                                                                    ?></label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="kt-radio-inline loginRadio row">
-                                                    <div class="col-12" id="emailBox" style="display:inline">
-                                                        <input type="text" class="form-control beforeLogin" id="emailOTPInp" placeholder="<?php echo "Enter OTP"; //Enter OTP 
-                                                                                                                                            ?>">
-                                                        <span class="appendOTPError"></span>
-                                                        <div class="d-flex justify-content-center" data-lang='M01109'>
-                                                            <a href="javascript:;" class="sendCode btn boldTxt text-center" style="color:#000;"><?php echo "Send OTP To Email"; //Send OTP Code 
-                                                                                                                                                    ?></a>
-                                                        </div>
-                                                        <span class="form__button-wrapper text-center timer" style="display: none; color: #fff; width: 95px;">
-                                                            <span class="p-3" style="display:block; color: #000"></span>
-                                                        </span>
-                                                    </div>
-                                                    </label>
-                                                    <div class="col-12 form-group">
-                                                        <span id="otpCode" class="customError text-danger" error="error"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div> -->
-
-                                <div class="row mt-5">
-                                    <div class="col-6">
-                                        <button class="btn btn-default goToPublicReg" style="width: 100%;"><?php echo $translations['A00115'][$language]; //Back ?></button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button id="signUpBtn" class="btn btn-primary" style="width: 100%;"><?php echo $translations['M00034'][$language]; //SIGN UP ?></button>
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-3 text-center">
-                                        <span style="color: #333333;"> Already have an account?</span>
-                                        <a class="sign-up-text ml-1" href="login" data-lang=''>
-                                            Login Now
-                                        </a>
-                                        
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 loginPage2">
-                        <a href="login" class="logoClick">
-                            <img src="images/logo/logo2.jpeg" class="customLogo">        
+        <div class="w-100 p-2">
+            <div class="btn-group languageDropdown">
+                <span type="" class="languageFont" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor: pointer;">
+                    <img class="mr-3" src="images/project/globe.png" alt="" width="20px">
+                    <span><?php echo $config["languages"][$language]['displayName'] ?></span>
+                    <span><i class="fa fa-angle-down ml-3" style="color: black;"></i></span>
+                </span>
+                <div class="dropdown-menu dropdown_language">
+                    <?php $languages = $config['languages']; ?>
+                    <?php foreach ($languages as $key => $value) {
+                        if ($key == "chineseSimplified" || $key == "chineseTraditional") {
+                            $flag = "chinese";
+                        } else if ($key == "korean") {
+                            $flag = "korean";
+                        } else if ($key == "vietnam") {
+                            $flag = "vietnam";
+                        } else if ($key == "japanese") {
+                            $flag = "japanese";
+                        } else if ($key == 'english') {
+                            $flag = "english";
+                        } else if ($key == "thailand") {
+                            $flag = "thai";
+                        }
+                    ?>
+                        <a href="javascript:void(0)" class="changeLanguage dropdown-item" language="<?php echo $key; ?>" style="margin-top: 0;margin-bottom: 0;">
+                            <img style="width: 20px;margin-right: 5px;" src="images/language/<?php echo $flag; ?>.png">
+                            <?php echo $languages[$key]['displayName']; ?>
                         </a>
-                        <div class="loginCenterText">
-                            <div class="loginFont01">
-                                <?php echo $translations['M00027'][$language]; /* Registration */ ?>
-                            </div>
-                            <div class="loginFont02">
-                                <?php echo $translations['M03666'][$language]; /* Health or Wealth? I want both! */ ?>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <?php } ?>
                 </div>
             </div>
         </div>
+
+        <div class="kt-container loginWrap">
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11 col-md-11">
+                        <div class="loginBox register">
+                            
+                            <div class="loginBorder">
+                                <div class="registrationForm">
+                                    <div class="logoWrapper mb-3">
+                                        <a href="/login.php">
+                                            <img src="images/logo/logo.png" alt="" class="loginLogo">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 regMask">
+                                        <div class="col-12 pt-4 text-center loginFont01">
+                                            Register New Account
+                                        </div>
+                                        <p class="formTitle" data-lang="M00027"><?php echo $translations['M00027'][$language]; //Registration 
+                                                                                ?></p>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00035"><?php echo $translations['M00035'][$language]; //Full Name 
+                                                                                        ?></label>
+                                                    <input id="fullName" type="text" class="form-control" placeholder="<?php echo $translations['M00377'][$language]; //Enter Your Full Name 
+                                                                                                                        ?>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00001"><?php echo $translations['M00001'][$language]; //Username 
+                                                                                        ?></label>
+                                                    <input id="username" type="text" class="form-control" placeholder="<?php echo $translations['M00241'][$language]; //Enter Your Username 
+                                                                                                                        ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group selectBox">
+                                                    <label for="" data-lang="M00037"><?php echo $translations['M00037'][$language]; //Country 
+                                                                                        ?></label>
+                                                    <select id="country" class="form-control">
+                                                        <option value=""><?php echo $translations['M00436'][$language]; ?></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00038"><?php echo $translations['M00038'][$language]; //Mobile Number 
+                                                                                        ?></label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend col-md-4 col-4 pl-0">
+                                                            <input class="form-control" id="phoneCode" placeholder="<?php echo $translations['M00388'][$language]; //Country Code ?>" disabled style="margin-bottom: -3px; border-bottom: unset;">
+                                                        </div>
+                                                        <input oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" type="text" class="form-control" id="phone" placeholder="<?php echo $translations['M00380'][$language]; //Enter Your Mobile Mumber ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00002"><?php echo $translations['M00002'][$language]; //Password 
+                                                                                        ?></label>
+                                                    <input id="password" type="password" class="form-control" placeholder="<?php echo $translations['M00382'][$language]; //Enter Your Password 
+                                                                                                                            ?>">
+                                                    <i class="far fa-eye eyeIcon3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00041"><?php echo $translations['M00041'][$language]; //Retype Password 
+                                                                                        ?></label>
+                                                    <input id="checkPassword" type="password" class="form-control" placeholder="<?php echo $translations['M00383'][$language]; //Retype Your Password 
+                                                                                                                                ?>">
+                                                    <i class="far fa-eye eyeIcon3"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00042"><?php echo $translations['M00042'][$language]; //Transaction Password 
+                                                                                        ?></label>
+                                                    <input id="tPassword" type="password" class="form-control" placeholder="<?php echo $translations['M00384'][$language]; //Enter Your Transaction Password 
+                                                                                                                            ?>">
+                                                    <i class="far fa-eye eyeIcon3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00043"><?php echo $translations['M00043'][$language]; //Retype Transaction Password 
+                                                                                        ?></label>
+                                                    <input id="checkTPassword" type="password" class="form-control" placeholder="<?php echo $translations['M00385'][$language]; //Retype Your Transaction Password 
+                                                                                                                                    ?>">
+                                                    <i class="far fa-eye eyeIcon3"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00039"><?php echo $translations['M00039'][$language]; //Email Address 
+                                                                                        ?></label>
+                                                    <input id="email" type="text" class="form-control" placeholder="<?php echo $translations['M00201'][$language]; //Enter Your Email Address 
+                                                                                                                    ?>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="" data-lang="M00044"><?php echo $translations['M00044'][$language]; //Sponsor Username 
+                                                                                        ?></label>
+                                                    <input id="sponsorUsername" type="text" class="form-control" placeholder="<?php echo $translations['M01167'][$language]; //Enter Your Referral Username 
+                                                                                                                                ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button class="btn btn-default goToPublicReg" style="width: 100%;"><?php echo $translations['A00115'][$language]; //Back ?></button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button id="signUpBtn" class="btn btn-primary" style="width: 100%;"><?php echo $translations['M02336'][$language]; //Submit ?></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3 text-center">
+                                            <span>Already have an account?</span>
+                                            <a class="btn forgotPasswordBtn ml-1" href="login" data-lang=''>
+                                                Login Now
+                                            </a>
+                                            
+                                        </div>
+                                        <!-- <?php include 'footerLogin.php'; ?> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
     </section>
 
 
@@ -355,47 +309,71 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
 
         $('#signUpBtn').click(function(){
 
-            $('.invalid-feedback').remove();
-            $('input').removeClass('is-invalid');
+            var survey = [];
 
-            fullName = $('#fullName').val();
-            username = $('#username').val();
-            country = $('#country').find('option:selected').val();
-            dialingArea = $('#phoneCode').val();
-            phone = $('#phone').val();
-            email = $('#email').val();
-            
-            password = $('#password').val();
-            checkPassword = $('#checkPassword').val();
-            tPassword = $('#tPassword').val();
-            checkTPassword = $('#checkTPassword').val();
-            // dateOfBirth = $('#dateOfBirth').val();
-            sponsorName = $('#sponsorUsername').val();
-            sponsorCode = $('#sponsorCode').val();
-            // identityNumber = $('#identityNumber').val();
-            placementUsername = $('#placementUsername').val();
-            placementPosition = $("input[name=placementPosition]:checked").val();
-            
-            // dialingArea = dialingArea.replace('+','');
+            $('.surveyLoop').each(function(){
+                var surveyAry = {};
+                var answer = $(this).children('.surveyInput').val();
+                var question_id = $(this).attr('questionID');
+                var type = $(this).attr('questionType');
+                var multipleOption = $(this).attr('multipleOption');
 
-            $.redirect('survey', {
-                fullName: fullName,
-                username: username,
-                country: country,
-                dialingArea: dialingArea,
-                phone: phone,
-                email: email,
-                password: password,
-                checkPassword: checkPassword,
-                tPassword: tPassword,
-                checkTPassword: checkTPassword,
-                sponsorName: sponsorName,
-		placementUsername: placementUsername,
-		placementPosition: placementPosition,
-                isFromQR: isFromQR,
-                sendOTPCode : sendOTPCode,
-                fromQr: '<?php echo $fromQR; ?>',
+                if (multipleOption == 1) {
+                    var multipleAns = [];
+
+                     $(this).children('.surveyInput2').each(function() {
+                        var answerAry = this.value;
+                        multipleAns.push(answerAry)
+                    });
+
+                    surveyAry = {
+                        question_id : question_id,
+                        answer : multipleAns,
+                        type : type
+                    };
+
+                    survey.push(surveyAry);
+                } else {
+                    surveyAry = {
+                        question_id : question_id,
+                        answer : answer,
+                        type : type
+                    };
+
+                    survey.push(surveyAry);
+                }
+
             });
+
+                var formData = {
+                    'command' : "publicRegistrationConfirmation",
+                    'registerType' : 'free',
+                    'fullName' : fullName,
+                    'username' : username,
+                    'country' : country,
+                    'dialingArea' : dialingArea,
+                    'phone' : phone,
+                    'email' : email,
+                    'password' : password,
+                    'checkPassword' : checkPassword,
+                    'tPassword' : tPassword,
+                    'checkTPassword' : checkTPassword,
+                    // 'dateOfBirth' : dateOfBirth,
+                    'sponsorName' : sponsorName,
+            'placementUsername' : placementUsername,
+            'placementPosition' : placementPosition,
+                    'isFromQR' : isFromQR,
+                    placementUsername: placementUsername,
+                    placementPosition : placementPosition,
+                    survey : survey,
+                    // 'sponsorCode' : sponsorCode,
+                    'sendOTPCode' : sendOTPCode,
+                    // 'identityNumber' : identityNumber
+                };
+
+
+                var fCallback = publicRegistrationSuccess;
+                ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
         });
 
         $('.goToPublicReg').click(function() {

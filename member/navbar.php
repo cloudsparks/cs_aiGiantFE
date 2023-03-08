@@ -32,11 +32,11 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
             <div class="col-12">
                 <div class="row align-items-center">
 
-                    <div class="col-md-4 col-7">
-                        <img src="images/logo/logo2.jpeg" class="customLogo">
+                    <div class="col-md-3 col-7">
+                        <img src="images/logo/logo.png" class="customLogo">
                     </div>
 
-                    <div class="col-md-8 col-6">
+                    <div class="col-md-9 col-6">
                         <!-- <a href="javascript:;" class="headerBurgerBtn d-lg-none float-right">
                             <i class="fas fa-bars"></i>
                         </a> -->

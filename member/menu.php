@@ -77,7 +77,7 @@
             </a>
         </div>
 
-        <!-- <div class="headerMenuItem">
+        <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn headerMenuDropdown">
                 <?php echo $translations['M03741'][$language]; /* Bonus Report */ ?>
                 <i class="fa fa-angle-down ml-1"></i>
@@ -85,24 +85,29 @@
             <div class="headerMenuDropdownBox">
                 <div class="headerMenuDropdownItem">
                     <a href="rebateBonus" class="btn menuDropdownBtn">
-                        <?php echo $translations['M03707'][$language]; /* ROI */ ?>
+                        <?php echo $translations['M01147'][$language]; /* Dividen */ ?> <?php echo $translations['M00961'][$language]; /* Report */ ?>
                     </a>
                 </div>
                 <div class="headerMenuDropdownItem">
                     <a href="communityBonus" class="btn menuDropdownBtn">
-                        <?php echo $translations['M03710'][$language]; /* Community */ ?>
+                        ROI Tier Bonus Report
                     </a>
                 </div>
                 <div class="headerMenuDropdownItem">
-                    <a href="pairingBonus" class="btn menuDropdownBtn">
-                        <?php echo $translations['M03662'][$language]; /* Pairing Bonus */ ?>
+                    <a href="leadershipBonus" class="btn menuDropdownBtn">
+                        <?php echo $translations['M03449'][$language]; /* Leadership Bonus */ ?>
+                    </a>
+                </div>
+                <div class="headerMenuDropdownItem">
+                    <a href="sponsorBonus" class="btn menuDropdownBtn">
+                        Sponsor Bonus Report
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="headerMenuItem">
-            <a href="editProfile" class="btn menuBtn" data-lang="M00025">
+            <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
                 <?php echo $translations['M00465'][$language]; //My Profile ?>
             </a>
         </div>
@@ -112,7 +117,7 @@
 		<?php echo $translations['M03703'][$language]; //More ?>
                 <i class="fa fa-angle-down ml-1"></i>
             </a>
-            <div class="headerMenuDropdownBox">
+            <!-- <div class="headerMenuDropdownBox">
                 <div class="headerMenuDropdownItem">
                     <a href="sponsorDiagram" class="btn menuDropdownBtn">
                         <?php echo $translations['M03704'][$language]; //Sponsor DIAGRAM ?>
@@ -133,7 +138,7 @@
             <?php echo $translations['M03717'][$language]; //iFItness Mall ?>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
         
     </div>
