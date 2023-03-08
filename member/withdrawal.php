@@ -82,6 +82,13 @@
                         <div class="col-md-6 col-12 px-5">
                             <div class="form-group mt-4">
                                 <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
+                                    <?php echo $translations['M01036'][$language]; //Crypto Rate ?>
+                                </label>
+                                
+                                <input id="cryptoRate" class="form-control inputDesign" type="text" disabled>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label data-lang="M00110" class="d-flex justify-content-between" style="color: #000;">
                                     <?php echo $translations['M00110'][$language]; //Withdrawal Amount ?>
                                 </label>
                                 
@@ -416,7 +423,7 @@ function loadWithdrawalData(data, message) {
 
 	$('#walletName').text(withdrawalData.creditTypeDisplay);
 	$('#balance').text(numberThousand(balance,2));
-	// $('#unitRate').val(numberThousand(unitRate, 2));
+	$('#cryptoRate').val(numberThousand(unitRate, 2));
     $('#adminFeePercentage').text(addCommas(adminFeePerc + "%"));
 
 	if(withdrawalType) {
