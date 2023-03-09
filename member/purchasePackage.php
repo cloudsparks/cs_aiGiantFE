@@ -251,7 +251,7 @@ function loadProductListing(data, message) {
 						</ul>
 						<div class="productLine mt-5"></div>
 						<div class="productPrice my-4 text-center">
-							${priceDisplay} 
+							$ ${priceDisplay} 
 						</div>
 						<div class="text-center" style="padding: 0 20px;">
 							<button onClick="submitBtn(${v['id']})" class="btn btn-primary purchaseBtn${i}" style="width:60%;border-radius:25px;"><?php echo $translations['M03715'][$language]; //Buy ?></button>		
