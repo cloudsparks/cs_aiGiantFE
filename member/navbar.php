@@ -100,7 +100,12 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                                             <?php echo $translations['M00025'][$language]; //Dashboard ?>
                                         </a>
                                     </div>
-                                    <div class="headerMenuItem">
+                                    <div class="headerMenuItem headerMenuItemMT">
+                                        <a href="purchasePackage" class="btn menuBtn" data-lang="M00025">
+                                            <?php echo $translations['M03747'][$language]; /* Purchase Package */ ?>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="headerMenuItem">
                                         <a href="courseVideo" class="btn menuBtn" data-lang="M00025">
                                     <?php echo $translations['M03702'][$language]; //Course Video ?>
                                         </a>
@@ -169,7 +174,7 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </section>
                             </div>
                         </div>
