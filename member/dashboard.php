@@ -28,14 +28,14 @@ $stopRecord = $_SESSION["stopRecord"];
 						<div class="row">
 							<div class="col-12 mt-4">
 								<div class="dashboard_text01 mb-2 text-center">
-									Welcome Back to AI Giant
+									<?php echo $translations['M03742'][$language]; /* Welcome Back to AI Giant */ ?>
 								</div>
 								<div class="seperateLine"></div>
 								<div class="dashboard_text02 mt-1 text-center">
 									<?php echo $_SESSION['username'] ?>
 								</div>
 								<div class="dashboard_text03 mb-4 text-center">
-									Joined 12-02-2022
+									<?php echo $translations['M03743'][$language]; /* Joined */ ?> 12-02-2022
 								</div>
 								<div class="seperateLine2"></div>
 							</div>
@@ -43,13 +43,13 @@ $stopRecord = $_SESSION["stopRecord"];
 						<div class="row px-2 pt-3 mt-3">
 							<div class="col-6 seperateLine3">
 								<img src="/images/dashboard_icon01.png" class="mt-2 ml-3 mr-3" style="float: left;">
-								<div class="dashboard_text03 ml-5">Ranking</div>
-								<div class="dashboard_text04 ml-5">Manager</div>
+								<div class="dashboard_text03 ml-5"><?php echo $translations['A00984'][$language]; /* Rank */ ?></div>
+								<div class="dashboard_text04 ml-5"><?php echo $translations['A00517'][$language]; /* Member */ ?></div>
 							</div>
 							<div class="col-6">
 								<img src="/images/dashboard_icon02.png" class="mt-2" style="float: left;">
-								<div class="dashboard_text03 ml-5">Total Investment</div>
-								<div class="dashboard_text04 ml-5">11,234.00</div>
+								<div class="dashboard_text03 ml-5"><?php echo $translations['M03744'][$language]; /* Total Investment */ ?></div>
+								<div class="dashboard_text04 ml-5">-</div>
 							</div>
 						</div>
 					</div>
@@ -62,7 +62,7 @@ $stopRecord = $_SESSION["stopRecord"];
 		<div class="col-md-7 col-12 mt-5 pl-5">
 			<div class="portfolioDisplay">
 				<a href="javascript:;" class="portfolioViewMore">
-					View More
+					<?php echo $translations['M03745'][$language]; /* View More */ ?>
 				</a>
 				<div class="dashboard_text05">
 					<?php echo $translations['A01291'][$language]; /* Portfolio */ ?>
@@ -87,46 +87,21 @@ $stopRecord = $_SESSION["stopRecord"];
 			<div class="newsDisplay">
 				<div class="row">
 					<div class="col-12 dashboard_text05">
-						Latest <?php echo $translations['M00030'][$language]; /* News */ ?>
+						<?php echo $translations['M03746'][$language]; /* Latest News */ ?>
 					</div>
 				</div>
 				<div class="row mt-2">
-					<div class="col-5">
+					<!-- <div class="col-5">
 						<img src="/images/news_image01.png" class="newsImage">
-					</div>
-					<div class="col-7 newsContent01">
-						<div class="news_text01">
-							Lorem ipsum dolor sit
+					</div> -->
+					<div class="col-12 newsContent01">
+						<img src="/images/comingSoon.webp" class="comingSoon">
+						<!-- <div class="news_text01">
+							Coming Soon
 						</div>
 						<div class="news_text02">
 							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-5">
-						<img src="/images/news_image02.png" class="newsImage">
-					</div>
-					<div class="col-7 newsContent01">
-						<div class="news_text01">
-							Lorem ipsum dolor sit
-						</div>
-						<div class="news_text02">
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-5">
-						<img src="/images/news_image03.png" class="newsImage">
-					</div>
-					<div class="col-7 newsContent01">
-						<div class="news_text01">
-							Lorem ipsum dolor sit
-						</div>
-						<div class="news_text02">
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

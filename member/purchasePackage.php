@@ -24,7 +24,7 @@ $stopRecord = $_SESSION["stopRecord"];
 		<div class="col-12 p-5">
 			<div class="productDisplayBox">
 				<div class="dashboard_text05">
-					Purchase Module
+					<?php echo $translations['M03747'][$language]; /* Purchase Package */ ?>
 				</div>
 
 				<div id="productDisplay" class="productDisplay mt-4 mb-4"></div>

@@ -59,19 +59,19 @@
             </a>
         </div>
 
-        <div class="headerMenuItem">
+        <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00415">
 		<?php echo $translations['M00415'][$language]; //My wallet ?>
             </a>
-        </div>
+        </div> -->
 
         <div class="headerMenuItem">
             <a href="purchasePackage" class="btn menuBtn" data-lang="M00025">
-                PURCHASE PACKAGE
+                <?php echo $translations['M03747'][$language]; /* Purchase Package */ ?>
             </a>
         </div>
 
-        <div class="headerMenuItem">
+        <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
                 <?php echo $translations['M00589'][$language]; //Setting ?>
             </a>
@@ -117,7 +117,7 @@
 		<?php echo $translations['M03703'][$language]; //More ?>
                 <i class="fa fa-angle-down ml-1"></i>
             </a>
-            <!-- <div class="headerMenuDropdownBox">
+            <div class="headerMenuDropdownBox">
                 <div class="headerMenuDropdownItem">
                     <a href="sponsorDiagram" class="btn menuDropdownBtn">
                         <?php echo $translations['M03704'][$language]; //Sponsor DIAGRAM ?>
@@ -138,8 +138,8 @@
             <?php echo $translations['M03717'][$language]; //iFItness Mall ?>
                     </a>
                 </div>
-            </div> -->
-        </div>
+            </div>
+        </div> -->
         
     </div>
 </div>
