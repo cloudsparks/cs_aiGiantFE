@@ -440,13 +440,10 @@ function loadDefaultListing(data, message) {
 									<div class="walletBoxDisplay${walletNumber}">
 										<div class="col-12 text-center">
 											<div class="walletTitle${walletNumber}">
-												Wallet ${walletNumber}
-											</div>
-											<div class="walletBox_balance${walletNumber} mt-3">
-												${numberThousand(v['balance'], 2)}									
-											</div>
-											<div class="walletBox_credit${walletNumber}">
 												${creditDisplay}
+											</div>
+											<div class="walletBox_balance${walletNumber} mt-5">
+												${numberThousand(v['balance'], 2)}									
 											</div>
 											<div class="mt-5 mb-1">
 												<a href="javascript:;" class="wallet_viewmore${walletNumber}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
