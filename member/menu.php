@@ -71,6 +71,12 @@
             </a>
         </div>
 
+        <div class="headerMenuItem">
+            <a href="javascript:;" class="btn menuBtn" data-toggle="modal" data-target="#qr_modal">
+                <?php echo $translations['M00561'][$language]; //my referral ?>
+            </a>
+        </div>
+
         <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
                 <?php echo $translations['M00589'][$language]; //Setting ?>

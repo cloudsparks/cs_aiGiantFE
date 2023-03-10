@@ -207,13 +207,13 @@ $languages = $sys['languages'];
                 </div> -->
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-6 mt-3">
+                        <div class="col-md-6 col-12 mt-3">
                             <div class="" id="qrcode">
                                 <!-- <img class="iconQR" src="<?php echo $config['favicon']; ?>"> -->
-                                <img class="iconQR" src="/images/logo/favicon.ico">
+                                <img class="iconQR" src="/images/logo/favicon2.ico">
                             </div>
                         </div>
-                        <div class="col-6 mt-5">
+                        <div class="col-md-6 col-12 mt-5">
                             <div class="form-group mt-5 ml-4">
                                 <input type="text" class="form-control qrcodeInp" value="" id="qrInput" readonly="readonly">
                             </div>

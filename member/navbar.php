@@ -105,6 +105,12 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                                             <?php echo $translations['M03747'][$language]; /* Purchase Package */ ?>
                                         </a>
                                     </div>
+
+                                    <div class="headerMenuItem headerMenuItemMT">
+                                        <a href="javascript:;" class="btn menuBtn" data-lang="M00025" data-toggle="modal" data-target="#qr_modal">
+                                            <?php echo $translations['M00561'][$language]; //my referral ?>
+                                        </a>
+                                    </div>
                                     <!-- <div class="headerMenuItem">
                                         <a href="courseVideo" class="btn menuBtn" data-lang="M00025">
                                     <?php echo $translations['M03702'][$language]; //Course Video ?>
