@@ -8,9 +8,9 @@
             <div class="text-center">
                 <a href="pageLogin.php" class="logo">
                     <!-- <?php echo "<img src=\"".$config["logoURL"]."\" alt=\"LOGO\" width=\"250\">"; ?> -->
-                    <?php echo "<img src=\"images/logo/logo.png\" alt=\"LOGO\" width=\"250\">"; ?>
+                    <?php echo "<img src=\"images/logo/logo.png\" alt=\"LOGO\" width=\"100\">"; ?>
                 </a>
-                <h5 class="text-muted m-t-0 font-600">
+                <h5 class="text-muted m-t-10 font-600">
                     <?php echo $translations['A00772'][$language]; /* Admin */ ?>
                 </h5>
             </div>
