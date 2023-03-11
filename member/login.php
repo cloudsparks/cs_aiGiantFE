@@ -74,7 +74,7 @@
                                         </div>
                                         <div class="col-12 mt-4">
                                             <div class="input-group">
-                                                <div class="input-group-prepend" style="margin-bottom: 3px;">
+                                                <div class="input-group-prepend loginLine">
                                                     <div class="input-group-text"><i class="fa fa-shield"></i></div>
                                                 </div>
                                                 <input id="captcha" type="text" class="form-control" placeholder="<?php echo $translations['M00003'][$language]; //Security Code ?>">

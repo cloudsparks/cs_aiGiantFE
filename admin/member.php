@@ -294,7 +294,8 @@ $countryList = $_SESSION['countryList'];
         pagination(pagerId, data.pageNumber, data.totalPage, data.totalRecord, data.numRecord);
 
         $('tr').each(function(){
-            $(':eq(10)',this).remove().insertBefore($(':eq(0)',this));
+            $(':eq(10)',this).remove().insertBefore($(':eq(1)',this));
+            $(':eq(11)',this).remove().insertBefore($(':eq(0)',this));
         });
 
         if(memberList) {

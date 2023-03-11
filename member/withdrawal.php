@@ -102,7 +102,7 @@
                                 <input id="receiveAmount" class="form-control inputDesign" type="text" disabled>
                             </div>
                         </div>
-                        <div class="col-6 mt-4">
+                        <div class="col-md-6 col-12 mt-4">
                             <div class="d-flex">
                                 <button onclick="goBack();" type="button" class="btn btn-default w-100 py-3 mr-3" data-lang="M00163"><?php echo $translations['M00163'][$language]; /* Back */?></button>
                                 <button id="nextBtn" type="button" class="btn btn-primary w-100 py-3" data-lang="M00034">

@@ -919,6 +919,7 @@ a.dbLink:hover {
 /* listing */
 .listingWrapper2 {
     background-color: #fff;
+    padding: 30px 15px;
 }
 
 .pageTitle {
@@ -973,7 +974,7 @@ a.dbLink:hover {
 }
 
 .disgramBox {
-    background-color: #6A9AE1;
+    background-color: #444A58;
     color: #fff;
     /*padding: 15px;*/
     border-radius: 0;
@@ -981,7 +982,8 @@ a.dbLink:hover {
 }
 
 .disgramBox.sponsor {
-    background-color: #146DEF;
+    background: rgb(39,111,212);
+background: linear-gradient(180deg, rgba(39,111,212,1) 0%, rgba(13,70,149,1) 100%);
     color: #fff;
     /*padding: 15px;*/
 }
@@ -993,7 +995,15 @@ a.dbLink:hover {
 .usernameWrap{
     border-bottom: 2px solid #ffffff4f;
     padding: 10px;
-    background-color: #1E62C1;
+    background-color: #072144;
+    font-size: 16px;
+    z-index: 100;
+}
+
+.usernameWrapSponsor{
+    border-bottom: 2px solid #ffffff4f;
+    padding: 10px;
+    background-color: #181E2B;
     font-size: 16px;
     z-index: 100;
 }

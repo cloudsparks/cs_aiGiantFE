@@ -13,24 +13,25 @@
 <section class="pageContent">
     <div class="kt-container">
         <div class="text-center">
-            <div class="pageTitle">
-                <span data-lang="M03704"><?php echo $translations['M03704'][$language]; //Sponsor DIAGRAM ?></span>
-            </div>
+            
         </div>
 
         <div class="col-12">
             <div class="row justify-content-center">
                 <div class="col-md-11 col-12">
 
-                    <div class="listingWrapper2">
+                    <div class="listingWrapper">
                     <div class="col-12">
+                        <div class="pageTitle mt-4 mb-4">
+                            <span data-lang="M03704"><?php echo $translations['M03704'][$language]; //Sponsor DIAGRAM ?></span>
+                        </div>
                         <form id="searchDIV">
                             <div class="col-12 px-0">
                                 <div class="row align-items-end">
-                                   <div class="col-lg-3 col-md-6 col-12">
+                                   <!-- <div class="col-lg-3 col-md-6 col-12">
                                         <label data-lang='M00001'><?php echo $translations['M00001'][$language]; //Username ?></label>
                                         <input type="text" class="form-control" id="username">
-                                    </div> 
+                                    </div>  -->
                                     <!-- <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0">
                                         <label data-lang='M00170'><?php echo $translations['M00170'][$language]; //Display Type ?></label>
                                         <select id="displayType" class="form-control">
@@ -40,11 +41,11 @@
                                         </select>
                                     </div>
  -->
-                                    <div class="col mt-3">
+                                    <!-- <div class="col mt-3">
                                         <button onclick="search()" class="btn btn-primary" type="button" name="button" data-lang='M00243'><?php echo $translations['M00243'][$language] /*Search*/ ?></button>
                                         <button id="btnClear" class="btn btn-default" type="button" name="button" data-lang='M00085'><?php echo $translations['M00085'][$language] /*Reset*/ ?></button>
                                         <span> <i class="fa fa-repeat ml-3" style="color:#696969; font-size: 20px;  transform: rotate(-40deg); vertical-align: text-top; cursor: pointer;" id="btnClear"></i> </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </form>
@@ -57,8 +58,8 @@
                         <div class="bgContainer p-5">
                             <div id="scaleBtnWrapper" style="float: right;">
                                 <div class="scaleBtnWrapper">
-                                    <button class="btn btn-default" onclick="treeSmaller()">-</button>
-                                    <button class="btn btn-default" onclick="treeBigger()">+</button>
+                                    <button style="border-radius: unset;" class="btn btn-default" onclick="treeSmaller()">-</button>
+                                    <button style="border-radius: unset;" class="btn btn-default" onclick="treeBigger()">+</button>
                                 </div>
                             </div>
                             <div id="treeHorizontalViewDiv" class="items"></div>

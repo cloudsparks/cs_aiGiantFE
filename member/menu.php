@@ -59,11 +59,11 @@
             </a>
         </div>
 
-        <!-- <div class="headerMenuItem">
+        <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00415">
 		<?php echo $translations['M00415'][$language]; //My wallet ?>
             </a>
-        </div> -->
+        </div>
 
         <div class="headerMenuItem">
             <a href="purchasePackage" class="btn menuBtn" data-lang="M00025">
@@ -71,13 +71,13 @@
             </a>
         </div>
 
-        <div class="headerMenuItem">
+        <!-- <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-toggle="modal" data-target="#qr_modal">
                 <?php echo $translations['M00561'][$language]; //my referral ?>
             </a>
-        </div>
+        </div> -->
 
-        <!-- <div class="headerMenuItem">
+        <div class="headerMenuItem">
             <a href="javascript:;" class="btn menuBtn" data-lang="M00025">
                 <?php echo $translations['M00589'][$language]; //Setting ?>
             </a>
@@ -145,7 +145,7 @@
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
         
     </div>
 </div>

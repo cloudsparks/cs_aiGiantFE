@@ -464,24 +464,24 @@ function buildSponsorTree(sponsor, downlines, treeDiv, scrollFlag, treeLogo) {
                                         <b class="diagramUser">${sponsor['username']}</b>
                                     </div>
                                     <div class="col-12 diagramTitle mt-3">
-                                        ${translations['M03639'][language]} :
+                                        Personal BV :
                                     </div>
                                     <div class="col-12 diagramContent">
-                                        ${addCommas(Number(sponsor['ownCourseFees']).toFixed(2))}
+                                        ${addCommas(Number(sponsor['personalBV']).toFixed(2))}
                                     </div>
 
                                     <div class="col-12 diagramTitle">
-                                        ${translations['M03640'][language]} :
+                                         Total Downline BV :
                                     </div>
 
                                     <div class="col-12 diagramContent">
-                                        ${addCommas(Number(sponsor['totalCourseFees']).toFixed(2))}
+                                        ${addCommas(Number(sponsor['totalDownlineBV']).toFixed(2))}
                                     </div>
                                      <div class="col-12 diagramTitle">
-                                        ${translations['M03641'][language]} :
+                                        Total Downline ROI Earned :
                                     </div>
                                     <div class="col-12 diagramContent mb-5">
-                                        ${addCommas(Number(sponsor['currentMonthCourseFees']).toFixed(2))}
+                                        ${addCommas(Number(sponsor['totalDownlineROIearn']).toFixed(2))}
                                     </div>
 
                                 </div>
@@ -504,31 +504,30 @@ function buildSponsorTree(sponsor, downlines, treeDiv, scrollFlag, treeLogo) {
                                 <div class="innerBox">
                                     <div class="col-12">
                                         <div class="row">
-                                            <div class="col-12 usernameWrap px-0">
+                                            <div class="col-12 usernameWrapSponsor px-0">
                                                 <b class="diagramUser">${downlines[key]['username']}</b>
                                             </div>
-                                            <div class="col-12 diagramTitle mt-3" style="color: #000;">
-                                                ${translations['M03639'][language]} :
+                                            <div class="col-12 diagramTitle mt-3">
+                                                Personal BV :
                                             </div>
-                                            <div class="col-12 diagramContent" style="color: #000;">
-                                                ${addCommas(Number(downlines[key]['ownCourseFees']).toFixed(2))}
-                                            </div>
-
-                                            <div class="col-12 diagramTitle" style="color: #000;">
-                                                ${translations['M03640'][language]} :
+                                            <div class="col-12 diagramContent">
+                                                ${addCommas(Number(downlines[key]['personalBV']).toFixed(2))}
                                             </div>
 
-                                            <div class="col-12 diagramContent" style="color: #000;">
-                                                ${addCommas(Number(downlines[key]['totalCourseFees']).toFixed(2))}
+                                            <div class="col-12 diagramTitle">
+                                                 Total Downline BV :
                                             </div>
 
-                                            <div class="col-12 diagramTitle" style="color: #000;">
-                                                ${translations['M03641'][language]} :
+                                            <div class="col-12 diagramContent">
+                                                ${addCommas(Number(downlines[key]['totalDownlineBV']).toFixed(2))}
+                                            </div>
+                                             <div class="col-12 diagramTitle">
+                                                Total Downline ROI Earned :
+                                            </div>
+                                            <div class="col-12 diagramContent mb-5">
+                                                ${addCommas(Number(downlines[key]['totalDownlineROIearn']).toFixed(2))}
                                             </div>
 
-                                            <div class="col-12 diagramContent mb-5" style="color: #000;">
-                                                ${addCommas(Number(downlines[key]['currentMonthCourseFees']).toFixed(2))}
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

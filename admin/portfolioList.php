@@ -211,7 +211,6 @@
         "Package",
         // "Unit Price",
         "Price",
-        "Package RV",
         "Status",
         "Done By",
     );
@@ -361,7 +360,6 @@
                     product_name: v['product_name'],
                     // unitPrice: numberThousand(v['unitPrice'], 2),
                     productPrice: numberThousand(v['productPrice'], 2),
-                    RvValue: numberThousand(v['RvValue'], 2),
                     statusDisplay: v['statusDisplay'],
                     creatorUsername: v['creatorUsername'],
 
