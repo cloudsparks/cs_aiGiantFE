@@ -66,7 +66,7 @@ $_SESSION["stopRecord"] = 1;
 </div>
 
 <div class="modal" id="reentryVerification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="padding-left:17px; padding-right: 17px;" aria-modal="true">
-    <div class="modal-dialog" role="document" style="max-width:80%;">
+    <div class="modal-dialog modal_width" role="document">
         <div class="modal-content">
             <div class="modal-header canvasheader">
               <img id="canvasAlertIcon" src="images/project/successIcon2.png" class="mr-2 modalMsgIcon" alt="">
@@ -84,11 +84,7 @@ $_SESSION["stopRecord"] = 1;
                 <!-- <div class="canvasButtonWrapper"> -->
 				<div>
 					<div class="row">
-						<div class="col-md-6 col-12">
-							<div id="buildCredit" class="row"></div>
-							<div id="buildCredit2" class="row"></div>
-						</div>
-						<div class="col-md-6 col-12 paymentSummaryBoxOutside">
+						<div class="col-12 paymentSummaryBoxOutside">
 							<div class="paymentSummaryBox">
 								<div class="row">
 
@@ -128,15 +124,20 @@ $_SESSION["stopRecord"] = 1;
 								</div>
 							</div>
 						</div>
+						<div class="col-12">
+							<div id="buildCredit" class="row"></div>
+							<div id="buildCredit2" class="row"></div>
+						</div>
+						
 						<div class="col-12 registrationBtnPosition" style="margin-top: 20px;">
 							<label class="registrationLabel"><?php echo $translations['M00042'][$language]; //Transaction Password ?> <span class="mustFill">*</span></label>
-							<input id="transactionPassword" class="form-control inputDesign" type="password">
+							<input id="transactionPassword" class="form-control inputDesign2" type="password">
 						</div>
 					</div>
 				</div>
 
 				<div class="text-center" style="margin-top: 20px;">
-					<button onclick="reentryCnlBtn()" type="button" class="btn btnDefaultModal" style="display:inline-block;width:49%;margin-right:1%;" data-dismiss="modal" data-lang="M00114"><?php echo $translations['M00114'][$language]; //Cancel ?></button>
+					<button onclick="reentryCnlBtn()" type="button" class="btn btn-default" style="display:inline-block;width:49%;margin-right:1%;" data-dismiss="modal" data-lang="M00114"><?php echo $translations['M00114'][$language]; //Cancel ?></button>
 					<button onclick="reentryConfirmationBtn()" type="button" class="btn btn-primary" style="display:inline-block;width:49%;" data-dismiss="modal" data-lang="M03654"><?php echo $translations['M03654'][$language]; /* Buy Now */ ?></button>
 				</div>
                     
@@ -383,20 +384,20 @@ function goPayment (data,message) {
 				<div class="col-12 paymentBox" style="margin-top: 10px">
 					<div class="row">
 						<div class="col-12"><span class="paymentName">${v['creditDisplay']}</span></div>
-						<div class="col-12 paymentBalance">
-							<?php echo $translations['M00097'][$language]; //Balance ?> : <span>${addCommas(Number(v['balance']).toFixed(2))}</span>
-								<div>
-								<?php echo $translations['M00515'][$language]; //Minimum ?> : <span>${addCommas(Number(v['minPrice']).toFixed(2))}</span>
-							</div>
-							<div>
-								<?php echo $translations['M01057'][$language]; //Maximum ?> : <span>${addCommas(Number(v['maxPrice']).toFixed(2))}</span>
-							</div>
-						</div>
 						<div class="col-12">
 							<!-- <label class="registrationLabel">${v['creditDisplay']} <span class="mustFill">*</span></label> -->
-							<input id="${v['creditType']}" data-credit="${v['creditType']}" class="form-control inputDesign paymentField" type="text" getCal="${v['formula']}" getRate="${v['rate']}">
+							<input id="${v['creditType']}" data-credit="${v['creditType']}" class="form-control inputDesign2 paymentField" type="text" getCal="${v['formula']}" getRate="${v['rate']}">
 						</div>
-						<div class="col-12 paymentCalculation">
+						<div class="col-4">
+							<?php echo $translations['M00097'][$language]; //Balance ?> : <span style="color: #276FD4;">${addCommas(Number(v['balance']).toFixed(2))}</span>
+						</div>
+						<div class="col-4">
+							<?php echo $translations['M00515'][$language]; //Minimum ?> : <span style="color: #276FD4;">${addCommas(Number(v['minPrice']).toFixed(2))}</span>
+						</div>
+						<div class="col-4">
+							<?php echo $translations['M01057'][$language]; //Maximum ?> : <span style="color: #276FD4;">${addCommas(Number(v['maxPrice']).toFixed(2))}</span>
+						</div>
+						<div class="col-4 paymentCalculation">
 							<?php echo $translations['M00262'][$language]; //Payment ?> : <span class="getCalculation">0.00</span>
 							<input type="hidden" class="getTotalCalculation">
 						</div>

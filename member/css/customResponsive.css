@@ -49,6 +49,10 @@
         font-size: 12px;
     }
 
+    .modal_width {
+        max-width: 100%;
+    }
+
     .dbPaddingX {
         padding-right: 30px; 
         padding-left: 30px; 
