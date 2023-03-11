@@ -50,7 +50,7 @@
                                 <div class="loginMask">
                                     <div class="row">
                                         <div class="col-12 mt-4 mb-4 text-center loginFont01">
-                                            Welcome Back
+                                            <?php echo $translations['M03742'][$language]; //Welcome ?>
                                         </div>
                                         <div class="col-12 mt-3">
                                             <div class="input-group">
@@ -88,9 +88,9 @@
                                             <button id="loginBtn" class="btn btn-login" data-lang='M00374'><?php echo $translations['M00374'][$language]; //Login ?></button>
                                         </div>
                                         <div class="col-12 mt-3 text-center">
-                                            <span>Do not have an account?</span>
+                                            <span><?php echo $translations['M01024'][$language]; //Don't have an Account ? ?></span>
                                             <a class="btn forgotPasswordBtn ml-1" href="publicRegistration" data-lang=''>
-                                                Register Now!
+                                                <?php echo $translations['M03699'][$language]; //Register Now! ?>
                                             </a>
                                             
                                         </div>

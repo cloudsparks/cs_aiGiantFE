@@ -199,12 +199,12 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
                                         </div>
 
                                         <div class="col-12 text-center mt-3" data-lang='M00034'>
-                                            <button id="signUpBtn" class="btn btn-primary">Register</button>
+                                            <button id="signUpBtn" class="btn btn-primary"><?php echo $translations['M00200'][$language]; //Sign Up ?></button>
                                         </div>
                                         <div class="col-12 mt-3 text-center">
-                                            <span>Already have an account?</span>
+                                            <span><?php echo $translations['A01048'][$language]; //Already have an account? ?></span>
                                             <a class="btn forgotPasswordBtn ml-1" href="login" data-lang=''>
-                                                Login Now
+                                                <?php echo $translations['A00774'][$language]; //Sign In ?>
                                             </a>
                                             
                                         </div>
