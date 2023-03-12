@@ -928,6 +928,10 @@ img {vertical-align: middle;}
 
 @media (min-width: 320px) and (max-width: 767px) {
 
+  .productDisplay {
+      display: block;
+  }
+
   .modalWidth {
     max-width: 100%!important;
   }

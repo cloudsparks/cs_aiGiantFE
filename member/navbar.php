@@ -144,17 +144,25 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                                             <?php echo $translations['M00025'][$language]; //Dashboard ?>
                                         </a>
                                     </div>
-                                    <div class="headerMenuItem headerMenuItemMT">
+                                    <div class="headerMenuItem">
                                         <a href="purchasePackage" class="btn menuBtn" data-lang="M00025">
                                             <?php echo $translations['M03747'][$language]; /* Purchase Package */ ?>
                                         </a>
                                     </div>
 
-                                    <div class="headerMenuItem headerMenuItemMT">
-                                        <a href="javascript:;" class="btn menuBtn" data-lang="M00025" data-toggle="modal" data-target="#qr_modal">
-                                            <?php echo $translations['M00561'][$language]; //my referral ?>
+                                     <div class="headerMenuItem">
+                                        <a href="editProfile" class="btn menuBtn" data-lang="M00025">
+                                            <?php echo $translations['M00465'][$language]; //My Profile ?>
                                         </a>
                                     </div>
+
+                                    <div class="headerMenuItem">
+                                        <a href="sponsorDiagram" class="btn menuBtn" data-lang="M00025">
+                                            <?php echo $translations['M03704'][$language]; //Sponsor DIAGRAM ?>
+                                        </a>
+                                    </div>
+
+
                                     <!-- <div class="headerMenuItem">
                                         <a href="courseVideo" class="btn menuBtn" data-lang="M00025">
                                     <?php echo $translations['M03702'][$language]; //Course Video ?>
@@ -189,12 +197,6 @@ $registrationUrl = urldecode($protocol.$domainName."/publicRegistration?qr=".$en
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="headerMenuItem">
-                                        <a href="editProfile" class="btn menuBtn" data-lang="M00025">
-                                    <?php echo $translations['M00465'][$language]; //My Profile ?>
-                                        </a>
                                     </div>
 
                                     <div class="headerMenuItem">

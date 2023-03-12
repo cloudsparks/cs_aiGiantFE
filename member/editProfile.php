@@ -19,7 +19,7 @@
 <section class="pageContent" style="padding-top:0;">
 	<div class="kt-container">
 		<div class="col-12 px-0">
-            <img src="/images/profileBg.png" class="w-100">
+            <img src="/images/profile_bg.png" class="w-100">
             <img src="/images/project/user.png" class="profileAvatar" style="display:block;object-fit: cover;width:80%;margin:auto;border-radius: 50%;width:117px;height:117px;" />
         </div>
         <div class="col-12 px-0 profileContainer">
@@ -185,7 +185,7 @@
 		                    </div>
 		                    <div class="row">
 		                        <div class="col-md-6 col-12 mt-3">
-		                            <div class="" id="qrcode2">
+		                            <div class="text-center" id="qrcode2">
 		                                <!-- <img class="iconQR" src="<?php echo $config['favicon']; ?>"> -->
 		                                <img class="iconQR" src="/images/logo/favicon2.ico">
 		                            </div>
@@ -221,10 +221,10 @@
                 </div>
 			</div>
 		</div>
-		<?php include 'footer.php'; ?>
+		
 	</div>
 </section>
-
+<?php include 'footer.php'; ?>
 
 
 </body>

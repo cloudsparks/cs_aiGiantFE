@@ -901,13 +901,13 @@ a.dbLink:hover {
 
 #qrcode2 .iconQR {
     position: absolute;
-    left: 38%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .pageContent {
-    min-height: 0vh;
+    /*min-height: 0vh;*/
     padding-bottom: 20px;
 }
 
@@ -2704,9 +2704,10 @@ background: unset;
 
   .profileAvatar {
     position: absolute;
-    top: 75px;
-    left: 100px;
+    top: 95%;
+    left: 180px;
     z-index: 100;
+    transform: translate(-50%, -50%);
   }
 
   .profile_margin {

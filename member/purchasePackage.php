@@ -237,7 +237,7 @@ function loadProductListing(data, message) {
 
 		productString += `
 			
-				<div class="dashboardProductDisplay">
+				<div class="dashboardProductDisplay mt-md-0 mt-4">
 					<div class="productTitle text-center mt-4">
 						${v['display']}
 					</div>
