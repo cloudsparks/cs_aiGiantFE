@@ -332,6 +332,7 @@
     .profileAvatar {
         top: 70px;
         left: 95px;
+        z-index: 1;
     }
 
     #qrcode2 .iconQR {

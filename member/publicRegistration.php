@@ -1,6 +1,6 @@
 <?php include 'include/config.php'; ?>
 <?php include 'head.php'; ?>
-<?php include 'headerjs.php'; ?>
+<!-- <?php include 'headerjs.php'; ?> -->
 
 <?php
 include_once('include/class.cryptDes.php');
@@ -259,9 +259,9 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
 
     $(document).ready(function() {
 
-        if (isMobile) {
-            document.getElementById("a").style.flexDirection = "column-reverse";
-        }
+        // if (isMobile) {
+        //     document.getElementById("a").style.flexDirection = "column-reverse";
+        // }
 
 
 
