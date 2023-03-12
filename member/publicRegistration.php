@@ -48,7 +48,7 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
         <div class="w-100 p-2">
             <div class="btn-group languageDropdown">
                 <span type="" class="languageFont" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor: pointer;">
-                    <img class="mr-3" src="images/project/globe.png" alt="" width="20px">
+                    <img class="mr-3" src="images/project/globe2.png" alt="" width="20px">
                     <span><?php echo $config["languages"][$language]['displayName'] ?></span>
                     <span><i class="fa fa-angle-down ml-3" style="color: black;"></i></span>
                 </span>

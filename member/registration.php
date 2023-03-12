@@ -11,16 +11,13 @@
 
 <section class="pageContent">
     <div class="kt-container">
-        <div class="text-center">
-            <div class="pageTitle">
-                <span data-lang="M00027"><?php echo $translations['M00027'][$language]; //Registration ?></span>
-            </div>
-        </div>
-
         <div class="col-12">
             <div class="row justify-content-center">
                 <div class="col-md-11 col-lg-10">
                     <div class="listingWrapper">
+                        <div class="pageTitle">
+                            <span data-lang="M00027"><?php echo $translations['M00027'][$language]; //Registration ?></span>
+                        </div>
                         <div class="col-12">
                             <div class="row">
                                 <div class="col-md-6">
@@ -65,7 +62,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="" data-lang="M00233"><?php echo $translations['M00233'][$language]; //OTP ?></label>
                                         <div style="display: flex;">
@@ -80,7 +77,7 @@
                                         </div>
                                         <div id="otpCode"></div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="goldLine mt-4 mb-5"></div>
                                 <div class="col-md-6">
@@ -117,7 +114,7 @@
                                         <input id="sponsorUsername" class="form-control" type="text">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">
                                             Placement Username
@@ -133,7 +130,7 @@
                                         <label for="right" style="margin-right: 15px;"><?php echo $translations['A00201'][$language]; /* Right */ ?></label>
                                         <span id="placementPositionError" class="customError text-danger"></span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row mx-0">
                                 <div class="col-xs-2 mr-2" data-lang='M00163'>
@@ -258,12 +255,12 @@
             tPassword = $('#tPassword').val();
             checkTPassword = $('#checkTPassword').val();
             sponsorName = $('#sponsorUsername').val();
-            placementUsername = $('#placementUsername').val();
-            placementPosition = $("input[name=placementPosition]:checked").val();
+            // placementUsername = $('#placementUsername').val();
+            // placementPosition = $("input[name=placementPosition]:checked").val();
             registerType = 'package';
             dialingArea = dialingArea.replace("+", "");
 
-            sendOTPCode = $('#otpCodeInp').val();
+            // sendOTPCode = $('#otpCodeInp').val();
 
             if (registerType == "package") {
                 var formData = {
@@ -283,9 +280,9 @@
                     'checkTPassword' : checkTPassword,
                     // 'dateOfBirth' : dateOfBirth,
                     'sponsorName' : sponsorName,
-                    'placementUsername' : placementUsername,
-                    'placementPosition' : placementPosition,
-                    'sendOTPCode' : sendOTPCode,
+                    // 'placementUsername' : placementUsername,
+                    // 'placementPosition' : placementPosition,
+                    // 'sendOTPCode' : sendOTPCode,
                     'fromMember' : 1,
                     'step' : 1
                 };

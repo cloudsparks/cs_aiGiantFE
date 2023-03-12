@@ -447,7 +447,7 @@ function loadDefaultListing(data, message) {
 											</div>
 											<div class="mt-5 mb-1">
 												<a href="javascript:;" class="wallet_viewmore${walletNumber}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-													View More
+													<?php echo $translations['M03745'][$language]; /* View More */ ?>
 												</a>
 												<div class="dropdown-menu walletDropdown dropdown-menu-right" role="menu" >
 													${buildMenu}

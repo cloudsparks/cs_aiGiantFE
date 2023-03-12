@@ -34,6 +34,7 @@ else
       $userData            = $result['data']['userDetails'];
       $userID              = $userData['userID'];
       $username            = $userData['username'];
+      $name                = $userData['name'];
       $userEmail           = $userData['userEmail'];
       $userRoleID          = $userData['userRoleID'];
       $sessionID           = $userData['sessionID'];
@@ -46,6 +47,7 @@ else
 
       $_SESSION["userID"]              = $userID;
       $_SESSION["username"]            = $username;
+      $_SESSION["name"]                = $name;
       $_SESSION["userEmail"]           = $userEmail;
       $_SESSION["sessionID"]           = $sessionID;
       $_SESSION["pagingCount"]         = $pagingCount;

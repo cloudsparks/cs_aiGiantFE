@@ -66,7 +66,7 @@ $_SESSION["stopRecord"] = 1;
 </div>
 
 <div class="modal" id="reentryVerification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="padding-left:17px; padding-right: 17px;" aria-modal="true">
-    <div class="modal-dialog modal_width" role="document">
+    <div class="modal-dialog modal_widthreentryConfirmationBtn()" role="document">
         <div class="modal-content">
             <div class="modal-header canvasheader">
               <img id="canvasAlertIcon" src="images/project/successIcon2.png" class="mr-2 modalMsgIcon" alt="">
@@ -128,6 +128,7 @@ $_SESSION["stopRecord"] = 1;
 							<div id="buildCredit" class="row"></div>
 							<div id="buildCredit2" class="row"></div>
 						</div>
+						<span class=".invalid-feedback amountError" style="display: none;"><?php echo $translations['E00329'][$language]; //Please enter an amount ?></span>
 						
 						<div class="col-12 registrationBtnPosition" style="margin-top: 20px;">
 							<label class="registrationLabel"><?php echo $translations['M00042'][$language]; //Transaction Password ?> <span class="mustFill">*</span></label>
@@ -139,6 +140,7 @@ $_SESSION["stopRecord"] = 1;
 				<div class="text-center" style="margin-top: 20px;">
 					<button onclick="reentryCnlBtn()" type="button" class="btn btn-default" style="display:inline-block;width:49%;margin-right:1%;" data-dismiss="modal" data-lang="M00114"><?php echo $translations['M00114'][$language]; //Cancel ?></button>
 					<button onclick="reentryConfirmationBtn()" type="button" class="btn btn-primary" style="display:inline-block;width:49%;" data-dismiss="modal" data-lang="M03654"><?php echo $translations['M03654'][$language]; /* Buy Now */ ?></button>
+					
 				</div>
                     
                     <!-- <button onclick="reentryCfmBtn()" type="button" class="btn btnThemeModal" data-dismiss="modal" data-lang="M00086"><?php echo $translations['M00086'][$language]; //Confirm ?></button>-->
@@ -494,25 +496,35 @@ function reentryConfirmationBtn () {
 
 	spendCredit = {};
 
+	var getAmtFlag;
+
 	$('.paymentField').each(function() {
 		// var getName = $(this).parent().parent().find('.paymentName').text();
 		var getName = $(this).attr('data-credit');
 		var getAmount = $(this).val();
+		getAmtFlag = $(this).val();
 		spendCredit[getName] = {amount: getAmount};
 	});
 
-	var formData  = {
-		command: 'reentryConfirmation',
-		type : 'package',
-		step : "2",
-		tPassword : tPassword,
-		spendCredit : spendCredit,
-		creditUnit : packagePrice,
-		packageID : packageID
-	};
+	console.log(getAmtFlag)
 
-	var fCallback = reentryConfirmationCallback;
-	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0); 
+	if (getAmtFlag == "") {
+		$('.amountError').show();
+	} else {
+		var formData  = {
+			command: 'reentryConfirmation',
+			type : 'package',
+			step : "2",
+			tPassword : tPassword,
+			spendCredit : spendCredit,
+			creditUnit : packagePrice,
+			packageID : packageID
+		};
+
+		var fCallback = reentryConfirmationCallback;
+		ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0); 
+	}
+	
 }
 
 function reentryConfirmationCallback (data,message) {

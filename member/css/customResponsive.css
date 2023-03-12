@@ -322,7 +322,20 @@
 
     .profileWrapper {
         flex-direction: column;
-        margin-top: -450px;
+        /*margin-top: -450px;*/
+    }
+
+    .profile_margin {
+        margin-left: 170px;
+    }
+
+    .profileAvatar {
+        top: 40px;
+        left: 20px;
+    }
+
+    #qrcode2 .iconQR {
+        left: 45%;
     }
 
     .profileBgLeft {

@@ -1460,7 +1460,7 @@ table.dataTable.dtr-column>tbody>tr>td.control:before, table.dataTable.dtr-colum
 
 .pageContent {
     min-height: 90vh;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
 }
 

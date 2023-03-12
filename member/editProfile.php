@@ -18,51 +18,81 @@
 
 <section class="pageContent" style="padding-top:0;">
 	<div class="kt-container">
-		<div class="col-12 pageTitle mt-4 text-center" style="color: #000;">
-			<span data-lang="M00465"><?php echo $translations['M03648'][$language]; //My Personal Details ?></span>
-		</div>
-		<div class="profileBGContainer mt-4">
-			
-		</div>
+		<div class="col-12 px-0">
+            <img src="/images/profileBg.png" class="w-100">
+            <img src="/images/project/user.png" class="profileAvatar" style="display:block;object-fit: cover;width:80%;margin:auto;border-radius: 50%;width:117px;height:117px;" />
+        </div>
+        <div class="col-12 px-0 profileContainer">
+        	<div class="profile_margin">
+        		<div class="profileFont01">
+	    			<span id="fullName"></span>
+	    		</div>
+	    		<div class="profileFont02">
+	    			@<span id="username"></span>
+	    		</div>
+        	</div>
+        	
+        </div>
+
 		
 		<div class="col-12">
-			<div class="row justify-content-center" style="padding:30px;">
-				<div class="col-md-6 col-12 profileSection">
+			<div class="row" style="padding:30px;">
+				<div class="col-md-6 col-12">
 					<div class="profileWrapper">
-						<div class="profileBg profileBgLeft">
-							<div class="row justify-content-center align-items-center">
-								<div class="col-12" style="position:relative;padding-top:40px;">
-									<img src="/images/project/user.png" style="display:block;object-fit: cover;width:80%;margin:auto;border-radius: 50%;width:117px;height:117px;" />
-									<!-- <i class="far fa-edit mr-3 editIconColor" style="position:absolute;top:0;right:0;"></i> -->
-								</div>
-
-								<div class="col-12 text-center">
-									<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#qr_modal" style="margin-top:20px;">
-										<?php echo $translations['M00561'][$language]; //my referral ?>
-									</a>									
-								</div>
-																								
-							</div>
-						</div>
 						<div class="listingWrapper profileBgRight">
 						    <div class="col-12">
 						    	<!-- <div class="d-flex justify-content-between align-items-center pfWrap">
 						    		<span class="subTitle subProfile" data-lang="M00417"><?php echo $translations['M00417'][$language]; //Edit Profile ?></span>
 						    		<a href="recentLogin.php" class="link" data-lang="M00990"><?php echo $translations['M00990'][$language]; //View Recent Login ?> ></a> ->
 						    	</div> -->
+						    	<div class="profile_text01 mb-4">
+			                    	<?php echo $translations['M03748'][$language]; /* My Details */ ?>
+			                    </div>
+						    	<div class="col-12 editField2">
+									<div class="d-flex justify-content-between align-items-start editField">
+										<div class="d-flex">
+											<!-- <div class="pfIcon">
+												<img src="/images/project/user.png">
+											</div> -->
+											<div>
+												<div class="pfTitle" data-lang="A00103">
+													<?php echo $translations['M00001'][$language]; //Username ?>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex">
+											<div class="pfDes">
+												<span id="usernameDisplay"></span>
+											</div>
+										</div>
+									</div>
+								</div>
 
-						    	<div class="col-12">
-						    		<div class="profileFont01">
-						    			<span id="fullName"></span>
-						    		</div>
-						    	</div>
-						    	<div class="col-12">
-						    		<div class="profileFont02">
-						    			@<span id="username"></span>
-						    		</div>
-						    	</div>
+								<div class="profileLine mb-3"></div>
 
-								<div class="col-12 editField2 mt-5">
+								<div class="col-12 editField2">
+									<div class="d-flex justify-content-between align-items-start editField">
+										<div class="d-flex">
+											<!-- <div class="pfIcon">
+												<img src="/images/project/user.png">
+											</div> -->
+											<div>
+												<div class="pfTitle" data-lang="A00103">
+													<?php echo $translations['M00035'][$language]; //Name ?>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex">
+											<div class="pfDes">
+												<span id="nameDisplay"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="profileLine mb-3"></div>
+
+								<div class="col-12 editField2">
 									<div class="d-flex justify-content-between align-items-start editField">
 										<div class="d-flex">
 											<!-- <div class="pfIcon">
@@ -81,7 +111,9 @@
 										</div>
 									</div>
 								</div>
-								
+									
+								<div class="profileLine mb-3"></div>
+
 								<div class="col-12 editField2">
 									<div class="d-flex justify-content-between align-items-start editField">
 										<div class="d-flex">
@@ -101,6 +133,8 @@
 										</div>
 									</div>
 								</div>
+
+								<div class="profileLine mb-3"></div>
 
 								<div class="col-12 editField2">
 									<div class="d-flex justify-content-between align-items-start editField">
@@ -122,85 +156,9 @@
 									</div>
 								</div>
 								
-
-								
 								<!-- <div class="col-12 editField2">
 									<div class="d-flex justify-content-between align-items-start editField">
 										<div class="d-flex">
-											<div class="pfIcon">
-												<img src="/images/project/user.png">
-											</div>
-											<div>
-												<div class="pfTitle" data-lang="A00194">
-													<?php echo $translations['A00194'][$language]; //City ?>
-												</div>
-											</div>
-										</div>
-										<div class="d-flex">
-											<div class="pfDes">
-												[<span id="city"></span>]
-											</div>
-											<div class="pfDes profileEditIcon">
-												<i class="far fa-edit mr-3 editIconColor"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-12 editField2">
-									<div class="d-flex justify-content-between align-items-start editField">
-										<div class="d-flex">
-											<div class="pfIcon">
-												<img src="/images/project/user.png">
-											</div>
-											<div>
-												<div class="pfTitle" data-lang="A00192">
-													<?php echo $translations['A00192'][$language]; //State ?>
-												</div>
-											</div>
-										</div>
-										<div class="d-flex">
-											<div class="pfDes">
-												[<span id="state"></span>]
-											</div>
-											<div class="pfDes profileEditIcon">
-												<i class="far fa-edit mr-3 editIconColor"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-12 editField2">
-									<div class="d-flex justify-content-between align-items-start editField">
-										<div class="d-flex">
-											<div class="pfIcon">
-												<img src="/images/project/user.png">
-											</div>
-											<div>
-												<div class="pfTitle" data-lang="A01117">
-													<?php echo $translations['A01117'][$language]; //Postcode ?>
-												</div>
-											</div>
-										</div>
-										<div class="d-flex">
-											<div class="pfDes">
-												[<span id="postcode"></span>]
-											</div>
-											<div class="pfDes profileEditIcon">
-												<i class="far fa-edit mr-3 editIconColor"></i>
-											</div>
-										</div>
-									</div>
-								</div> -->
-								
-								
-								
-								<div class="col-12 editField2">
-									<div class="d-flex justify-content-between align-items-start editField">
-										<div class="d-flex">
-											<!-- <div class="pfIcon">
-												<img src="/images/project/user.png">
-											</div> -->
 											<div>
 												<div class="pfTitle" data-lang="M03711">
 													<?php echo $translations['M03711'][$language]; //Highest Package ?>
@@ -213,12 +171,54 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								
 						     </div>
 						</div>
 					</div>
 				</div>
+				<div class="col-md-6 col-12 mt-md-0 mt-4">
+					<div class="profileWrapper">
+						<div class="listingWrapper profileBgRight">
+							<div class="profile_text01">
+		                    	<?php echo $translations['M00561'][$language]; //my referral ?>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-md-6 col-12 mt-3">
+		                            <div class="" id="qrcode2">
+		                                <!-- <img class="iconQR" src="<?php echo $config['favicon']; ?>"> -->
+		                                <img class="iconQR" src="/images/logo/favicon2.ico">
+		                            </div>
+		                        </div>
+		                        <div class="col-md-6 col-12 mt-5">
+		                        	<div class="col-12">
+					                    <div class="col-12 text-center mb-3" style="background-color: transparent;padding-bottom: 5px;">
+					                        <a href="javascript:;" class="btn btnSocial fb" onclick="shareFacebook('qrInput')">
+					                            <img class="" src="images/fb-icon.png">
+					                        </a>
+					                        <a href="javascript:;" class="btn btnSocial twitter" onclick="shareTwitter('qrInput')">
+					                            <img class="" src="images/tw-icon.png">
+					                        </a>
+					                        <a href="javascript:;" class="btn btnSocial whatsapp" onclick="shareWhatsapp('qrInput')">
+					                            <img class="" src="images/wa-icon.png">
+					                        </a>
+					                    </div>
+					                </div>
+		                            <div class="form-group mt-5 ml-4">
+		                                <input type="text" class="form-control qrcodeInp" value="" id="qrInput2" readonly="readonly">
+		                            </div>
+		                            <div class="text-center mt-3">
+		                                <button type="button" class="btn btn-primary" onclick="copyQR2()"><?php echo $translations['M00137'][$language]; //Copy Link ?></button>
+		                            </div>
+		                        </div>
+		                    </div>
+		                   </div>
+		               </div>
+
+                    <div class="copiedMsg mt-2" style="display: none;">
+		                <i class="fa fa-check" aria-hidden="true"></i><?php echo $translations['M00880'][$language]; //Copied to Clipboard ?>
+		            </div>
+                </div>
 			</div>
 		</div>
 		<?php include 'footer.php'; ?>
@@ -276,6 +276,21 @@ $(document).ready(function(){
 	};
 	var fCallback = loadMemberDetail;
 	ajaxSend(url, formData, method, fCallback, debug, bypassBlocking, bypassLoading, 0);
+
+	var text = "<?php echo $qrCodeRegistrationUrl; ?>"
+		$('#qrInput2').val(text);
+		$('#qrcode2').qrcode({
+
+		  render: "canvas",
+		  text: "<?php echo $qrCodeRegistrationUrl; ?>",
+		  width: 200,
+		  height: 200,
+		  background: "#ffffff",
+		  foreground: "#000000",
+		  src: '',
+		  imgWidth: 40,
+		  imgHeight: 40
+	});
 
 	// $('#datepicker').datepicker({
 	// 	autoclose: true,
@@ -404,6 +419,8 @@ function loadMemberDetail(data, message){
 
 	$('#fullName').text(member.name)
 	$('#username').text(member.username)
+	$('#usernameDisplay').text(member.name)
+	$('#nameDisplay').text(member.username)
 	$('#referralName').text(member.sponsorUsername)
 	$('#user').text(member['name']);
 	$('#email').text(member['email']);
@@ -586,6 +603,22 @@ function showPassword3() {
 function successChange(data, message) {
 	$('#confirmationModal').modal('hide');
 	showMessage(message, 'success', '<?php echo $translations['M00042'][$language]; // transaction password ?>', '', 'editProfile');
+}
+
+function copyQR2() {
+  /* Get the text field */
+  var copyText = document.getElementById("qrInput2");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  // alert("Copied QR Link: " + copyText.value);
+  $(".copiedMsg").show();
 }
 
 </script>
