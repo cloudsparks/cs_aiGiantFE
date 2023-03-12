@@ -92,11 +92,11 @@ if (isset($_SESSION["userID"]) && isset($_SESSION["sessionID"])) {
                                         </a>
                                     </div>
                                     <div class="col-12 regMask">
-                                        <div class="col-12 pt-4 text-center loginFont01">
-                                            Register New Account
+                                        <div class="col-12 pt-4 pb-4 text-center loginFont01">
+						<?php echo $translations['M00027'][$language]; //Registration ?>
                                         </div>
-                                        <p class="formTitle" data-lang="M00027"><?php echo $translations['M00027'][$language]; //Registration 
-                                                                                ?></p>
+                                        <!-- <p class="formTitle" data-lang="M00027"><?php echo $translations['M00027'][$language]; //Registration 
+                                                                                ?></p> -->
                                         <div class="row mb-2">
                                             <div class="col-md-6">
                                                 <div class="form-group">

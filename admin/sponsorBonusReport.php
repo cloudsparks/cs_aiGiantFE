@@ -165,7 +165,7 @@
     var thArray  = Array(
             '<?php echo $translations['A00969'][$language]; /* Bonus Date */ ?>',
             'Member ID',
-            '<?php echo $translations['A00107'][$language]; /* Username */ ?>',
+            '<?php echo $translations['A00102'][$language]; /* Username */ ?>',
             'Full Name',
             'Leader Username',
             'From Member',
@@ -297,10 +297,10 @@
                      username : v['username'],
                      name: v['name'], 
                      leaderName : v['leaderUsername'],
-                     fromMember : v['from_id'],
-                     price : addCormer(v['amount']),
+                     fromMember : v['fromUsername'],
+                     price : addCormer(v['fromAmount']),
                      percentage : v['percentage'],
-                     totalBonus : addCormer(v['bonus_amount'])
+                     totalBonus : addCormer(v['payableAmount'])
                  };
                  newList.push(rebuildData);
              });
